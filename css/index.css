@@ -1,0 +1,59 @@
+.section-intro {
+    background-color: #fff;
+    padding: 0z;
+    text-align: center;
+}
+
+.section-intro h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.section-intro p {
+    font-size: 18px;
+}
+
+.section-imagens {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.imagem {
+    margin-bottom: 20px;
+}
+
+.section-conteudo {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.beneficio {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.beneficio p {
+    font-size: 16px;
+}
+
