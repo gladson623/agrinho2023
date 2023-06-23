@@ -1,131 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/responsive.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="logo">
-        <img src="logo.png" alt="Logo do Site">
-        <h1>nome do site</h1>
-      </div>
-      <nav class="navbar">
-        <ul class="menu">
-          <li class="menu-item"><a href="#" class="active">Página Inicial</a></li>
-          <li class="menu-item"><a href="#">Página Inicial2</a></li>
-          <li class="menu-item"><a href="#">Página Inicial3</a></li>
-          <li class="menu-item"><a href="#">Página Inicial4</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="content">
-      <section class="section-intro">
-        <div class="container">
-          <h1>Sistema de Esgoto</h1>
-          <p>O sistema de esgoto é um conjunto de estruturas e processos que
-            coleta, transporta, trata e destina corretamente os resíduos
-            líquidos e sólidos gerados por residências, comércios e indústrias.
-            Ele desempenha um papel fundamental na preservação do meio ambiente,
-            na saúde pública e no bem-estar das comunidades.</p>
-          <p>Através de uma rede extensa de tubulações, o sistema de esgoto
-            coleta os resíduos de água provenientes de pias, chuveiros, vasos
-            sanitários, lavadoras, entre outros pontos de origem. Esses resíduos
-            são então conduzidos até estações de tratamento, onde são
-            processados para remover impurezas e reduzir a carga poluente antes
-            de serem devolvidos ao meio ambiente.</p>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      visibility: hidden;
+      display: none;
+    }
 
-      <section class="section-imagens">
-        <div class="container">
-          <div class="imagem">
-            <img src="imagem1.jpg" alt="Imagem 1">
-          </div>
-          <div class="imagem">
-            <img src="imagem2.jpg" alt="Imagem 2">
-          </div>
-        </div>
-      </section>
+    .check {
+      position: relative;
+      display: block;
+      width: 60px;
+      height: 30px;
+      background-color: #181818;
+      cursor: pointer;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: ease-in 0.5s;
+    }
 
-      <section class="section-conteudo">
-        <div class="container">
-          <h2>Benefícios do sistema de esgoto</h2>
-          <div class="beneficios">
-            <div class="beneficio">
-              <h3>Melhoria na saúde pública</h3>
-              <p>O sistema de esgoto adequado reduz o risco de contaminação por
-                doenças transmitidas pela água, como cólera, hepatite A e
-                diarreia. Ele evita o contato direto com resíduos e ajuda a
-                manter a saúde da população em geral.</p>
-            </div>
-            <div class="beneficio">
-              <h3>Preservação do meio ambiente</h3>
-              <p>O tratamento de esgoto remove substâncias poluentes e impurezas
-                antes de serem devolvidas aos corpos d'água, ajudando a proteger
-                ecossistemas aquáticos e a preservar a fauna e flora local.</p>
-            </div>
-            <div class="beneficio">
-              <h3>Redução de impactos ambientais</h3>
-              <p>O sistema de esgoto diminui a contaminação do solo e do lençol
-                freático, evitando a poluição do meio ambiente. Além disso, ele
-                contribui para a redução de odores desagradáveis e proliferação
-                de insetos e roedores.</p>
-            </div>
-            <div class="beneficio">
-              <h3>Prevenção de enchentes e alagamentos</h3>
-              <p>Um sistema de esgoto eficiente evita o acúmulo de água nas vias
-                públicas, reduzindo o risco de enchentes e alagamentos em áreas
-                urbanas. Ele garante o correto escoamento dos resíduos líquidos,
-                mantendo as ruas mais seguras e transitáveis.</p>
-            </div>
-            <div class="beneficio">
-              <h3>Melhoria na qualidade de vida</h3>
-              <p>Com um sistema de esgoto adequado, as condições de higiene e
-                saneamento básico são melhoradas, proporcionando um ambiente
-                mais limpo, saudável e seguro para a população. Isso contribui
-                para a qualidade de vida e bem-estar das comunidades.</p>
-            </div>
-            <div class="beneficio">
-              <h3>Melhoria na qualidade de vida</h3>
-              <p>Com um sistema de esgoto adequado, as condições de higiene e
-                saneamento básico são melhoradas, proporcionando um ambiente
-                mais limpo, saudável e seguro para a população. Isso contribui
-                para a qualidade de vida e bem-estar das comunidades.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    input[type="checkbox"]:checked~.check {
+      background-color: #ddd;
+      box-shadow: 0 0 0 99999px black;
+    }
 
-    <footer class="footer">
+    .check::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      background: #ddd;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      transition: 0.5s;
+    }
+
+    input[type="checkbox"]:checked~.check::before {
+      transform: translateX(-50px);
+    }
+
+    .check::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      background: #181818;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      transition: 0.5s;
+      transform: translateX(-50px)
+    }
+
+    input[type="checkbox"]:checked~.check::after {
+      transform: translateX(0px);
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+
+    input[type="checkbox"]:checked~* {
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body class="dark-mode overlay">
+  <input type="checkbox" id="darkModeCheckbox">
+  <label class="check" for="darkModeCheckbox"></label>
+  <header class="header">
+    <div class="logo dark-mode">
+      <img src="logo.png" alt="Logo do Site">
+      <h1 class="dark-mode">nome do site</h1>
+    </div>
+    <nav class="navbar">
+
+      <ul class="menu">
+        <li class="menu-item"><a href="#" class="active">Beneficios</a></li>
+        <li class="menu-item"><a href="#">Página Inicial2</a></li>
+        <li class="menu-item"><a href="#">Página Inicial3</a></li>
+        <li class="menu-item"><a href="#">Página Inicial4</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="section-intro animated">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="logo-footer.png" alt="Logo do Site">
-            <h2>Nome do Site</h2>
-          </div>
-          <div class="footer-info">
-            <p>&copy; 2023 Nome do Site. Todos os direitos reservados.</p>
-            <p>Desenvolvido por <a href="#">Gladson Coronado</a></p>
-          </div>
-          <nav class="footer-nav">
-            <ul class="footer-menu">
-              <li><a href="#">Página Inicial</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Serviços</a></li>
-              <li><a href="#">Contato</a></li>
-            </ul>
-          </nav>
+        <h1>Sistema de Esgoto</h1>
+        <p>O sistema de esgoto é um conjunto de estruturas e processos que
+          coleta, transporta, trata e destina corretamente os resíduos
+          líquidos e sólidos gerados por residências, comércios e indústrias.
+          Ele desempenha um papel fundamental na preservação do meio ambiente,
+          na saúde pública e no bem-estar das comunidades.</p>
+        <p>Através de uma rede extensa de tubulações, o sistema de esgoto
+          coleta os resíduos de água provenientes de pias, chuveiros, vasos
+          sanitários, lavadoras, entre outros pontos de origem. Esses resíduos
+          são então conduzidos até estações de tratamento, onde são
+          processados para remover impurezas e reduzir a carga poluente antes
+          de serem devolvidos ao meio ambiente.</p>
+      </div>
+    </section>
+
+    <section class="section-imagens">
+      <div class="container">
+        <div class="imagem">
+          <img src="imagem1.jpg" alt="Imagem 1">
+        </div>
+        <div class="imagem">
+          <img src="imagem2.jpg" alt="Imagem 2">
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="section-conteudo">
+      <div class="container">
+        <h2>Benefícios do sistema de esgoto</h2>
+        <div class="beneficios">
+          <div class="beneficio">
+            <h3>Melhoria na saúde pública</h3>
+            <p>O sistema de esgoto adequado reduz o risco de contaminação por
+              doenças transmitidas pela água, como cólera, hepatite A e
+              diarreia. Ele evita o contato direto com resíduos e ajuda a
+              manter a saúde da população em geral.</p>
+          </div>
+          <div class="beneficio">
+            <h3>Preservação do meio ambiente</h3>
+            <p>O tratamento de esgoto remove substâncias poluentes e impurezas
+              antes de serem devolvidas aos corpos d'água, ajudando a proteger
+              ecossistemas aquáticos e a preservar a fauna e flora local.</p>
+          </div>
+          <div class="beneficio">
+            <h3>Redução de impactos ambientais</h3>
+            <p>O sistema de esgoto diminui a contaminação do solo e do lençol
+              freático, evitando a poluição do meio ambiente. Além disso, ele
+              contribui para a redução de odores desagradáveis e proliferação
+              de insetos e roedores.</p>
+          </div>
+          <div class="beneficio">
+            <h3>Prevenção de enchentes e alagamentos</h3>
+            <p>Um sistema de esgoto eficiente evita o acúmulo de água nas vias
+              públicas, reduzindo o risco de enchentes e alagamentos em áreas
+              urbanas. Ele garante o correto escoamento dos resíduos líquidos,
+              mantendo as ruas mais seguras e transitáveis.</p>
+          </div>
+          <div class="beneficio">
+            <h3>Melhoria na qualidade de vida</h3>
+            <p>Com um sistema de esgoto adequado, as condições de higiene e
+              saneamento básico são melhoradas, proporcionando um ambiente
+              mais limpo, saudável e seguro para a população. Isso contribui
+              para a qualidade de vida e bem-estar das comunidades.</p>
+          </div>
+          <div class="beneficio">
+            <h3>Melhoria na qualidade de vida</h3>
+            <p>Com um sistema de esgoto adequado, as condições de higiene e
+              saneamento básico são melhoradas, proporcionando um ambiente
+              mais limpo, saudável e seguro para a população. Isso contribui
+              para a qualidade de vida e bem-estar das comunidades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="logo-footer.png" alt="Logo do Site">
+          <h2>Nome do Site</h2>
+        </div>
+        <div class="footer-info">
+          <p>&copy; 2023 Nome do Site. Todos os direitos reservados.</p>
+          <p>Desenvolvido por <a href="#">Gladson Coronado</a></p>
+        </div>
+        <nav class="footer-nav">
+          <ul class="footer-menu">
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

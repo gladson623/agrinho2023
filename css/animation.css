@@ -1,0 +1,228 @@
+/* Animação de fade-in para o cabeçalho */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.header {
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Animação de slide-in para o menu */
+@keyframes slide-in {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Animação de zoom-in para as seções */
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.section-intro,
+.section-imagens,
+.section-conteudo {
+    animation-name: zoom-in;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+/* Animação de fade-in para os benefícios */
+@keyframes fade-in-beneficios {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.beneficio {
+    animation-name: fade-in-beneficios;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+/* Animação de slide-up para o rodapé */
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    animation-name: slide-up;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Animação de fade-in para o texto do rodapé */
+@keyframes fade-in-footer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.footer-info,
+.footer-nav {
+    animation-name: fade-in-footer;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Animação de zoom-in para os itens do menu no rodapé */
+@keyframes zoom-in-footer {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.footer-menu li {
+    animation-name: zoom-in-footer;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Animação de slide-up para o texto de direitos autorais no rodapé */
+@keyframes slide-up-footer {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-info p:first-child {
+    animation-name: slide-up-footer;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Animação de slide-in para os itens do menu */
+@keyframes slide-in-menu {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.menu-item {
+    animation-name: slide-in-menu;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+/* Animação de fade-in para os títulos das seções */
+@keyframes fade-in-title {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-intro h1,
+.section-conteudo h2,
+.footer-logo h2 {
+    animation-name: fade-in-title;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Animação de zoom-in para as imagens das seções */
+@keyframes zoom-in-image {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.section-imagens .imagem {
+    animation-name: zoom-in-image;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+/* Animação de fade-in para os parágrafos das seções */
+@keyframes fade-in-paragraph {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.section-intro p,
+.section-conteudo .beneficio p {
+    animation-name: fade-in-paragraph;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
