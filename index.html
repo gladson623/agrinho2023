@@ -11,83 +11,193 @@
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/responsive.css">
   <style>
-    input[type="checkbox"] {
-      -webkit-appearance: none;
+    .modal {
       visibility: hidden;
-      display: none;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.7);
+      transition: all 0.4s;
     }
 
-    .check {
+    .modal:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal_item {
+      border-radius: 4px;
       position: relative;
-      display: block;
-      width: 60px;
-      height: 30px;
-      background-color: #181818;
-      cursor: pointer;
-      border-radius: 20px;
-      overflow: hidden;
-      transition: ease-in 0.5s;
+      width: 50%;
+      background: #fff;
+      padding: 2em;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      padding-bottom: 5rem;
     }
 
-    input[type="checkbox"]:checked~.check {
-      background-color: #ddd;
-      box-shadow: 0 0 0 99999px black;
-    }
-
-    .check::before {
-      content: '';
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      background: #ddd;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      transition: 0.5s;
-    }
-
-    input[type="checkbox"]:checked~.check::before {
-      transform: translateX(-50px);
-    }
-
-    .check::after {
-      content: '';
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      background: #181818;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      transition: 0.5s;
-      transform: translateX(-50px)
-    }
-
-    input[type="checkbox"]:checked~.check::after {
-      transform: translateX(0px);
-    }
-
-    body {
-      background-color: #fff;
+    .modal_item h3 {
+      margin-top: 0;
+      font-size: 24px;
       color: #333;
     }
 
+    .back {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: #585858;
+      text-decoration: none;
+      font-size: 18px;
+      width: calc(100% - 20px);
+      padding: 10px 0;
+      text-align: center;
+      background-color: #87CEEB;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+    }
 
-    input[type="checkbox"]:checked~* {
-      color: white;
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .back:hover {
+      background-color: #6faec7;
+    }
+
+
+    .modal_content {
+      margin-top: 1.5em;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .footer-btn-back {
+      width: 150px;
+      padding: 10px;
+      text-decoration: none;
+      background-color: #cfcca8;
+      color: #000;
+      border-radius: 3px;
+      text-align: center;
+      margin-top: 2em;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .footer-btn-back:hover {
+      background-color: #b0ad85;
     }
   </style>
-
 </head>
 
 <body class="dark-mode overlay">
   <input type="checkbox" id="darkModeCheckbox">
   <label class="check" for="darkModeCheckbox"></label>
-  <header class="header">
-    <div class="logo dark-mode">
-      <img src="logo.png" alt="Logo do Site">
-      <h1 class="dark-mode">nome do site</h1>
+  <div id="modal1" class="modal">
+    <div class="modal_item">
+      <h3>Sistema de Esgoto</h3>
+      <p>Um conjunto de estruturas e processos que coleta, transporta, trata e destina corretamente os resíduos líquidos
+        e sólidos gerados por residências, comércios e indústrias. Desempenha um papel fundamental na preservação do
+        meio ambiente, na saúde pública e no bem-estar das comunidades. Através de uma rede extensa de tubulações,
+        coleta os resíduos de água provenientes de pias, chuveiros, vasos sanitários, lavadoras, entre outros pontos de
+        origem. Esses resíduos são então conduzidos até estações de tratamento, onde são processados para remover
+        impurezas e reduzir a carga poluente antes de serem devolvidos ao meio ambiente.</p>
+      <div>
+        <a href="#" class="close">Fechar</a>
+        <a href="#" class="back">Voltar</a>
+      </div>
     </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal_item">
+      <h3>Melhoria na saúde pública</h3>
+      <p>O sistema de esgoto adequado reduz o risco de contaminação por doenças transmitidas pela água, como cólera,
+        hepatite A e diarreia. Além de evitar o contato direto com resíduos, contribui para a manutenção da saúde da
+        população em geral. A coleta e o tratamento adequados dos resíduos líquidos protegem a qualidade da água,
+        evitando a propagação de doenças e proporcionando um ambiente saudável para todos.</p>
+      <div>
+        <a href="#" class="close">Fechar</a>
+        <a href="#" class="back">Voltar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal_item">
+      <h3>Redução de impactos ambientais</h3>
+      <p>O sistema de esgoto diminui a contaminação do solo e do lençol freático, evitando a poluição do meio ambiente.
+        Além disso, ele contribui para a redução de odores desagradáveis e a proliferação de insetos e roedores. O
+        tratamento dos resíduos líquidos remove substâncias poluentes e impurezas, garantindo que a água devolvida ao
+        meio ambiente esteja mais limpa e menos prejudicial aos ecossistemas aquáticos.</p>
+      <div>
+        <a href="#" class="close">Fechar</a>
+        <a href="#" class="back">Voltar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal_item">
+      <h3>Prevenção de enchentes e alagamentos</h3>
+      <p>Um sistema de esgoto eficiente evita o acúmulo de água nas vias públicas, reduzindo o risco de enchentes e
+        alagamentos em áreas urbanas. Ele garante o correto escoamento dos resíduos líquidos, mantendo as ruas mais
+        seguras e transitáveis. Além disso, a coleta adequada dos resíduos evita obstruções nos sistemas de drenagem,
+        prevenindo o transbordamento de água durante períodos de chuva intensa.</p>
+      <div>
+        <a href="#" class="close">Fechar</a>
+        <a href="#" class="back">Voltar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal_item">
+      <h3>Melhoria na qualidade de vida</h3>
+      <p>Com um sistema de esgoto adequado, as condições de higiene e saneamento básico são melhoradas, proporcionando
+        um ambiente mais limpo, saudável e seguro para a população. Isso contribui para a qualidade de vida e bem-estar
+        das comunidades. Além disso, o tratamento dos resíduos líquidos ajuda a eliminar odores desagradáveis e reduz a
+        presença de insetos e roedores, criando um ambiente mais agradável para se viver.</p>
+      <div>
+        <a href="#" class="close">Fechar</a>
+        <a href="#" class="back">Voltar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal_item">
+      <h3>Melhoria na qualidade de vida</h3>
+      <p>O sistema de esgoto desempenha um papel crucial na preservação do meio ambiente. Ao coletar e tratar os
+        resíduos líquidos, evita-se a contaminação de rios, lagos e lençóis freáticos, protegendo os ecossistemas
+        aquáticos e a biodiversidade. Além disso, o tratamento dos resíduos contribui para a redução da poluição
+        atmosférica, uma vez que impede a liberação de substâncias tóxicas na atmosfera.</p>
+      <div>
+        <a href="#" class="close">Fechar</a>
+        <a href="#" class="back">Voltar</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo do Site">
+      <h1>nome do site</h1>
+    </div>
+
     <nav class="navbar">
 
       <ul class="menu">
@@ -95,7 +205,6 @@
         <li class="menu-item"><a href="#">Página Inicial2</a></li>
         <li class="menu-item"><a href="#">Página Inicial3</a></li>
         <li class="menu-item"><a href="#">Página Inicial4</a></li>
-
       </ul>
     </nav>
   </header>
@@ -103,7 +212,7 @@
   <main class="content">
     <section class="section-intro animated">
       <div class="container">
-        <h1>Sistema de Esgoto</h1>
+        <h1 class="dark-mode">Sistema de Esgoto</h1>
         <p>O sistema de esgoto é um conjunto de estruturas e processos que
           coleta, transporta, trata e destina corretamente os resíduos
           líquidos e sólidos gerados por residências, comércios e indústrias.
@@ -131,48 +240,70 @@
 
     <section class="section-conteudo">
       <div class="container">
-        <h2>Benefícios do sistema de esgoto</h2>
-        <div class="beneficios">
+        <h2 class="dark-mode">Benefícios do sistema de esgoto</h2>
+        <div class="beneficios wrapper">
           <div class="beneficio">
-            <h3>Melhoria na saúde pública</h3>
-            <p>O sistema de esgoto adequado reduz o risco de contaminação por
-              doenças transmitidas pela água, como cólera, hepatite A e
-              diarreia. Ele evita o contato direto com resíduos e ajuda a
-              manter a saúde da população em geral.</p>
+            <a href="#modal1">
+
+              <h3 class="dark-mode">Melhoria na saúde pública</h3>
+              <p>O sistema de esgoto adequado reduz o risco de doenças transmitidas pela água, como cólera, hepatite A e
+                diarreia, protegendo a saúde da população em geral...
+                <p class="red"> para saber mais clicke aqui!!!</p>
+              </p>
+            </a>
           </div>
           <div class="beneficio">
-            <h3>Preservação do meio ambiente</h3>
-            <p>O tratamento de esgoto remove substâncias poluentes e impurezas
-              antes de serem devolvidas aos corpos d'água, ajudando a proteger
-              ecossistemas aquáticos e a preservar a fauna e flora local.</p>
+            <a href="#modal2">
+              <h3 class="dark-mode">Preservação do meio ambiente</h3>
+              <p>O tratamento de esgoto remove substâncias poluentes e impurezas antes de serem devolvidas aos corpos
+                d'água, contribuindo para a proteção dos ecossistemas aquáticos e a preservação da fauna e flora
+                local....
+                <p class="red"> para saber mais clicke aqui!!!</p>
+              </p>
+            </a>
           </div>
           <div class="beneficio">
-            <h3>Redução de impactos ambientais</h3>
-            <p>O sistema de esgoto diminui a contaminação do solo e do lençol
-              freático, evitando a poluição do meio ambiente. Além disso, ele
-              contribui para a redução de odores desagradáveis e proliferação
-              de insetos e roedores.</p>
+            <a href="#modal3">
+              <h3 class="dark-mode">Redução de impactos ambientais</h3>
+              <p>O sistema de esgoto diminui a contaminação do solo e do lençol freático, evitando a poluição do meio
+                ambiente. Além disso, ele contribui para a redução de odores desagradáveis e a proliferação de insetos e
+                roedores...
+                <p class="red"> para saber mais clicke aqui!!!</p>
+              </p>
+            </a>
           </div>
           <div class="beneficio">
-            <h3>Prevenção de enchentes e alagamentos</h3>
-            <p>Um sistema de esgoto eficiente evita o acúmulo de água nas vias
-              públicas, reduzindo o risco de enchentes e alagamentos em áreas
-              urbanas. Ele garante o correto escoamento dos resíduos líquidos,
-              mantendo as ruas mais seguras e transitáveis.</p>
+            <a href="#modal4">
+              <h3 class="dark-mode">Prevenção de enchentes e alagamentos</h3>
+              <p>Um sistema de esgoto eficiente evita o acúmulo de água nas vias
+                públicas, reduzindo o risco de enchentes e alagamentos em áreas
+                urbanas. Ele garante o correto escoamento dos resíduos líquidos,
+                mantendo as ruas mais seguras e transitáveis...
+                <p class="red"> para saber mais clicke aqui!!!</p>
+              </p>
+            </a>
           </div>
           <div class="beneficio">
-            <h3>Melhoria na qualidade de vida</h3>
-            <p>Com um sistema de esgoto adequado, as condições de higiene e
-              saneamento básico são melhoradas, proporcionando um ambiente
-              mais limpo, saudável e seguro para a população. Isso contribui
-              para a qualidade de vida e bem-estar das comunidades.</p>
+            <a href="#modal5">
+              <h3 class="dark-mode">Melhoria na qualidade de vida</h3>
+              <p>Com um sistema de esgoto adequado, as condições de higiene e
+                saneamento básico são melhoradas, proporcionando um ambiente
+                mais limpo, saudável e seguro para a população. Isso contribui
+                para a qualidade de vida e bem-estar das comunidades...
+                <p class="red"> para saber mais clicke aqui!!!</p>
+              </p>
+            </a>
           </div>
           <div class="beneficio">
-            <h3>Melhoria na qualidade de vida</h3>
-            <p>Com um sistema de esgoto adequado, as condições de higiene e
-              saneamento básico são melhoradas, proporcionando um ambiente
-              mais limpo, saudável e seguro para a população. Isso contribui
-              para a qualidade de vida e bem-estar das comunidades.</p>
+            <a href="#modal6">
+              <h3 class="dark-mode">Melhoria na qualidade de vida</h3>
+              <p>Com um sistema de esgoto adequado, as condições de higiene e
+                saneamento básico são melhoradas, proporcionando um ambiente
+                mais limpo, saudável e seguro para a população. Isso contribui
+                para a qualidade de vida e bem-estar das comunidades...
+                <p class="red"> para saber mais clicke aqui!!!</p>
+              </p>
+            </a>
           </div>
         </div>
       </div>
