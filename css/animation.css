@@ -1,3 +1,8 @@
+:root {
+    --animation-duration-1: 1s;
+    --animation-delay-05: 0.5s;
+}
+
 /* Animação de fade-in para o cabeçalho */
 @keyframes fade-in {
     0% {
@@ -9,16 +14,18 @@
     }
 }
 
-.header {
+.header,
+html {
     animation-name: fade-in;
-    animation-duration: 1s;
+    animation-duration: var(--animation-duration-1);
     animation-fill-mode: both;
+    animation-delay: var(--animation-delay-05);
 }
 
 /* Animação de slide-in para o menu */
 @keyframes slide-in {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(-1.25rem);
     }
 
     100% {
@@ -26,9 +33,9 @@
     }
 }
 
-.navbar {
+.navbar ul {
     animation-name: slide-in;
-    animation-duration: 1s;
+    animation-duration: var(--animation-duration-1);
     animation-fill-mode: both;
 }
 
@@ -47,15 +54,15 @@
 
 .section-intro,
 .section-imagens,
-.section-conteudo {
+.section-content {
     animation-name: zoom-in;
-    animation-duration: 1s;
+    animation-duration: var(--animation-duration-1);
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: var(--animation-delay-05);
 }
 
 /* Animação de fade-in para os benefícios */
-@keyframes fade-in-beneficios {
+@keyframes fade-in-benefits {
     0% {
         opacity: 0;
     }
@@ -65,93 +72,31 @@
     }
 }
 
-.beneficio {
-    animation-name: fade-in-beneficios;
-    animation-duration: 1s;
+.benefit {
+    animation-name: fade-in-benefits;
+    animation-duration: var(--animation-duration-1);
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: var(--animation-delay-05);
 }
 
 /* Animação de slide-up para o rodapé */
 @keyframes slide-up {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(1.25rem);
     }
 
     100% {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.footer {
-    animation-name: slide-up;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-/* Animação de fade-in para o texto do rodapé */
-@keyframes fade-in-footer {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.footer-info,
-.footer-nav {
-    animation-name: fade-in-footer;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-/* Animação de zoom-in para os itens do menu no rodapé */
-@keyframes zoom-in-footer {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.footer-menu li {
-    animation-name: zoom-in-footer;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-/* Animação de slide-up para o texto de direitos autorais no rodapé */
-@keyframes slide-up-footer {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.footer-info p:first-child {
-    animation-name: slide-up-footer;
-    animation-duration: 1s;
-    animation-fill-mode: both;
 }
 
 /* Animação de slide-in para os itens do menu */
 @keyframes slide-in-menu {
     0% {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-1.25rem);
     }
 
     100% {
@@ -162,16 +107,16 @@
 
 .menu-item {
     animation-name: slide-in-menu;
-    animation-duration: 1s;
+    animation-duration: var(--animation-duration-1);
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: var(--animation-delay-05);
 }
 
 /* Animação de fade-in para os títulos das seções */
 @keyframes fade-in-title {
     0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-20rem);
     }
 
     100% {
@@ -181,10 +126,9 @@
 }
 
 .section-intro h1,
-.section-conteudo h2,
-.footer-logo h2 {
+.section-content h2 {
     animation-name: fade-in-title;
-    animation-duration: 1s;
+    animation-duration: var(--animation-duration-1);
     animation-fill-mode: both;
 }
 
@@ -203,9 +147,9 @@
 
 .section-imagens .imagem {
     animation-name: zoom-in-image;
-    animation-duration: 1s;
+    animation-duration: var(--animation-duration-1);
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: var(--animation-delay-05);
 }
 
 /* Animação de fade-in para os parágrafos das seções */
@@ -220,9 +164,157 @@
 }
 
 .section-intro p,
-.section-conteudo .beneficio p {
-    animation-name: fade-in-paragraph;
-    animation-duration: 1s;
+.section-content .benefit p {}
+
+.animation {
+    animation-duration: var(--animation-duration);
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: var(--animation-delay);
+}
+
+.fade-in {
+    animation: fade-in var(--animation-duration) both;
+}
+
+.slide-in {
+    animation: slide-in var(--animation-duration) both;
+}
+
+.zoom-in {
+    animation: zoom-in var(--animation-duration) both;
+}
+
+.carrosel {
+    width: 37.5rem;
+    height: 15.625rem;
+    outline: 0.1875rem solid black;
+    overflow: hidden;
+    margin: auto;
+    box-shadow: 0.625rem 0.625rem 0.9375rem rgba(0, 0, 0, 0.7);
+}
+
+.carrosel ul {
+    display: flex;
+    list-style: none;
+    width: 112.5rem;
+    height: 15.625rem;
+}
+
+.carrosel ul li img {
+    width: 37.5rem;
+    height: 15.625rem;
+}
+
+.carrosel li {
+    position: relative;
+    animation: slide 25s infinite ease-out;
+    background-color: black;
+}
+
+@media (max-width: 37.5rem) {
+    .carrosel ul li img {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+
+    .carrosel ul {
+        width: 50rem;
+        height: 15.625rem;
+    }
+
+    .carrosel {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+
+    .carrosel li {
+        position: relative;
+        animation: slideMobile 25s infinite ease-out;
+    }
+}
+
+@keyframes slide {
+    0% {
+
+        left: 0rem;
+    }
+
+    20% {
+        left: 0rem;
+    }
+
+    25% {
+        left: -37.5rem;
+    }
+
+    45% {
+        left: -37.5rem;
+    }
+
+    50% {
+        left: -75rem;
+    }
+
+    70% {
+        left: -75rem;
+    }
+
+    75% {
+        left: -112.5rem;
+    }
+
+    95% {
+        left: -112.5rem;
+    }
+
+    100% {
+        left: 0rem;
+    }
+}
+
+@keyframes slideMobile {
+    0% {
+
+        left: 0rem;
+    }
+
+    20% {
+
+        left: 0rem;
+    }
+
+    25% {
+
+        left: -12.5rem;
+    }
+
+    45% {
+
+        left: -12.5rem;
+    }
+
+    50% {
+
+        left: -25rem;
+    }
+
+    70% {
+
+        left: -25rem;
+    }
+
+    75% {
+
+        left: -37.5rem;
+    }
+
+    95% {
+
+        left: -37.5rem;
+    }
+
+    100% {
+
+        left: 0rem;
+    }
 }
