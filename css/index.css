@@ -58,6 +58,124 @@
     border-radius: 5px;
 }
 
+.slides {
+    padding: 0;
+    width: 50%;
+    height: 30vw;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide-container {
+    display: block;
+}
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 30vw;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all 0.7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 30%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.171);
+}
+
+.slide:hover+nav label {
+    opacity: 0.5s;
+}
+
+.nav label:hover {
+    opacity: 1;
+}
+
+.slides .prev,
+.slides .next {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.slides .prev::before,
+.slides .next::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 20px;
+    border-color: transparent transparent transparent yellow;
+    transform: translateY(-50%);
+}
+
+.slides .prev::before {
+    left: 45%;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.slides .next::before {
+    right: 45%;
+
+}
+
+.slides .prev:hover,
+.slides .next:hover {
+    opacity: 1;
+}
+
+.nav .next {
+    right: 0;
+}
+
+.nav .prev {
+    left: 0;
+}
+
+input:checked+.slide-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked+.slide-container .nav label {
+    display: block;
+}
+
 /* Estilos para telas menores */
 @media screen and (max-width: 768px) {
     .intro {
