@@ -1,0 +1,54 @@
+.section {
+    padding: 2.5rem 0;
+    border-bottom: 0.0625rem solid #ccc;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+
+.section p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.parallax-inner {
+    position: relative;
+    height: 18.75rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.parallax1 {
+    background-image: url('imagens/esgoto_poluicao1.jpg');
+}
+
+.parallax2 {
+    background-image: url('imagens/esgoto_poluicao2.jpg');
+}
+
+.parallax3 {
+    background-image: url('imagens/esgoto_tratamento1.jpg');
+}
+
+.parallax4 {
+    background-image: url('imagens/esgoto_tratamento2.jpg');
+}
+
+.parallax-inner p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.25rem;
+    max-width: 37.5rem;
+    margin: 0 auto;
+}

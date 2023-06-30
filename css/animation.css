@@ -203,6 +203,7 @@ html {
 .carrosel ul li img {
     width: 37.5rem;
     height: 15.625rem;
+    pointer-events: none;
 }
 
 .carrosel li {

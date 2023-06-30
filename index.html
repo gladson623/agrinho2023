@@ -1,272 +1,245 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beneficios</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/animation.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvantagens</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/disadvantages.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .slides {
+            padding: 0;
+            width: 50%;
+            height: 30vw;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+        }
 
-  </style>
+        .slides * {
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+        }
+
+        .slides input {
+            display: none;
+        }
+
+        .slide-container {
+            display: block;
+        }
+
+        .slide {
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 30vw;
+            display: block;
+            position: absolute;
+            transform: scale(0);
+            transition: all 0.7s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav label {
+            width: 30%;
+            height: 100%;
+            display: none;
+            position: absolute;
+            opacity: 0;
+            z-index: 1;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.171);
+        }
+
+        .slide:hover+nav label {
+            opacity: 0.5s;
+        }
+
+        .nav label:hover {
+            opacity: 1;
+        }
+
+        .slides .prev,
+        .slides .next {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .slides .prev::before,
+        .slides .next::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 20px;
+            border-color: transparent transparent transparent yellow;
+            transform: translateY(-50%);
+        }
+
+        .slides .prev::before {
+            left: 45%;
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .slides .next::before {
+            right: 45%;
+
+        }
+
+        .slides .prev:hover,
+        .slides .next:hover {
+            opacity: 1;
+        }
+
+        .nav .next {
+            right: 0;
+        }
+
+        .nav .prev {
+            left: 0;
+        }
+
+        input:checked+.slide-container .slide {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 1s ease-in-out;
+        }
+
+        input:checked+.slide-container .nav label {
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="dark-mode overlay">
-  <header class="header">
-    <div class="content">
-      <a href="#" target="_blank" class="logo"><img src="img/logo.png" title="Loop Nerd"></a>
+    <header class="header">
+        <div class="content">
+            <a href="#" target="_blank" class="logo"><img src="img/logo.png" title="Loop Nerd"></a>
 
-      <input class="mobile-btn" type="checkbox" id="mobile-btn" />
-      <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
+            <input class="mobile-btn" type="checkbox" id="mobile-btn" />
+            <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
 
-      <ul class="nav">
-        <li><a class="active" href="index.html" title="Beneficios">Beneficios</a></li>
-        <li><a href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
-        <li><a href="#" title="Artigos">Artigos</a></li>
-        <li><a href="#" title="Contato">Contato</a></li>
-      </ul>
-    </div><!--content-->
-  </header>
-  <input type="checkbox" id="darkModeCheckbox">
-  <label class="check" for="darkModeCheckbox"></label>
-  <div id="modal1" class="modal">
-    <div class="modal_item">
-      <h3>Melhoria na saúde pública</h3>
-      <div>
-        <p>Um conjunto de estruturas e processos que coleta, transporta, trata e destina corretamente os
-          resíduos líquidos
-          e sólidos gerados por residências, comércios e indústrias. Desempenha um papel fundamental na preservação do
-          meio ambiente, na saúde pública e no bem-estar das comunidades.
-          Através de uma rede extensa de tubulações,
-          coleta os resíduos de água provenientes de pias, chuveiros, vasos sanitários, lavadoras, entre outros pontos
-          deorigem. Esses resíduos são então conduzidos até estações de tratamento, onde são processados para remover
-          impurezas e reduzir a carga poluente antes de serem devolvidos ao meio ambiente.</p>
-        </p>
-        </p>
-      </div>
-      <div>
-        <a href="#" class="close">Fechar</a>
-        <a href="#" class="back">Voltar</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal2" class="modal">
-    <div class="modal_item">
-      <h3>Preservação do meio ambiente</h3>
-      <p>O sistema de esgoto adequado reduz o risco de contaminação por doenças transmitidas pela água, como cólera,
-        hepatite A e diarreia. Além de evitar o contato direto com resíduos, contribui para a manutenção da saúde da
-        população em geral.
-        A coleta e o tratamento adequados dos resíduos líquidos protegem a qualidade da água,
-        evitando a propagação de doenças e proporcionando um ambiente saudável para todos.
-      </p>
-      <div>
-        <a href="#" class="close">Fechar</a>
-        <a href="#" class="back">Voltar</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal3" class="modal">
-    <div class="modal_item">
-      <h3>Redução de impactos ambientais</h3>
-      <p>O sistema de esgoto diminui a contaminação do solo e do lençol freático, evitando a poluição do meio ambiente.
-        Além disso, ele contribui para a redução de odores desagradáveis e a proliferação de insetos e roedores.
-        O
-        tratamento dos resíduos líquidos remove substâncias poluentes e impurezas, garantindo que a água devolvida ao
-        meio ambiente esteja mais limpa e menos prejudicial aos ecossistemas aquáticos.
-      </p>
-      <div class="btnExit">
-        <a href="#" class="close">Fechar</a>
-        <a href="#" class="back">Voltar</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal4" class="modal">
-    <div class="modal_item">
-      <h3>Prevenção de enchentes e alagamentos</h3>
-      <p>Um sistema de esgoto eficiente evita o acúmulo de água nas vias públicas, reduzindo o risco de enchentes e
-        alagamentos em áreas urbanas.
-        Ele garante o correto escoamento dos resíduos líquidos, mantendo as ruas mais
-        seguras e transitáveis.
-        Além disso, a coleta adequada dos resíduos evita obstruções nos sistemas de drenagem,
-        prevenindo o transbordamento de água durante períodos de chuva intensa.
-      </p>
-      <div>
-        <a href="#" class="close">Fechar</a>
-        <a href="#" class="back">Voltar</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal5" class="modal">
-    <div class="modal_item">
-      <h3>Melhoria na qualidade de vida</h3>
-      <p>Com um sistema de esgoto adequado, as condições de higiene e saneamento básico são melhoradas, proporcionando
-        um ambiente mais limpo, saudável e seguro para a população.
-        Isso contribui para a qualidade de vida e bem-estar
-        das comunidades. Além disso, o tratamento dos resíduos líquidos ajuda a eliminar odores desagradáveis e reduz
-        a
-        presença de insetos e roedores, criando um ambiente mais agradável para se viver.
-      </p>
-      <div>
-        <a href="#" class="close">Fechar</a>
-        <a href="#" class="back">Voltar</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal6" class="modal">
-    <div class="modal_item">
-      <h3>Protegendo o Meio Ambiente</h3>
-      <p>O sistema de esgoto desempenha um papel crucial na preservação do meio ambiente. Ao coletar e tratar os
-        resíduos líquidos, evita-se a contaminação de rios, lagos e lençóis freáticos, protegendo os ecossistemas
-        aquáticos e a biodiversidade.
-        Além disso, o tratamento dos resíduos contribui para a redução da poluição
-        atmosférica, uma vez que impede a liberação de substâncias tóxicas na atmosfera.
-      </p>
-      <div>
-        <a href="#" class="close">Fechar</a>
-        <a href="#" class="back">Voltar</a>
-      </div>
-    </div>
-  </div>
-
-
-
-  <main class="content">
-    <section class="section-intro zoom-in animation delayed-animations">
-      <div class="container">
-        <h1 class="dark-mode">Sistema de Esgoto</h1>
-        <p>O sistema de esgoto é um conjunto de estruturas e processos que
-          coleta, transporta, trata e destina corretamente os resíduos
-          líquidos e sólidos gerados por residências, comércios e indústrias.
-          Ele desempenha um papel fundamental na preservação do meio ambiente,
-          na saúde pública e no bem-estar das comunidades.
-          <span class="hide">Através de uma rede extensa de tubulações, o sistema de esgoto
-            coleta os resíduos de água provenientes de pias, chuveiros, vasos
-            sanitários, lavadoras, entre outros pontos de origem. Esses resíduos
-            são então conduzidos até estações de tratamento, onde são
-            processados para remover impurezas e reduzir a carga poluente antes
-            de serem devolvidos ao meio ambiente.</span>
-        </p>
-      </div>
-    </section>
-
-    <section class="dark-mode">
-      <div class="carrosel">
-        <ul>
-          <li>
-            <img src="imagens/esgoto_tratamento1.jpg" alt="">
-          </li>
-          <li>
-            <img src="imagens/esgoto_tratamento2.jpg" alt="">
-          </li>
-          <li>
-            <img src="imagens/esgoto_poluicao1.jpg" alt="">
-          </li>
-          <li>
-            <img src="imagens/esgoto_poluicao2.jpg" alt="">
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section-conteudo">
-      <div class="container">
-        <h2 class="dark-mode">Benefícios do sistema de esgoto</h2>
-        <div class="benefits">
-          <div class="benefit">
-            <a href="#modal1">
-
-              <h3 class="dark-mode">Melhoria na saúde pública</h3>
-              <p>O sistema de esgoto adequado reduz o risco de doenças transmitidas pela água, como cólera, hepatite A e
-                diarreia, protegendo a saúde da população em geral...
-                <p class="red"><b>para saber mais clicke aqui!!!</b></p>
-              </p>
-            </a>
-          </div>
-          <div class="benefit">
-            <a href="#modal2">
-              <h3 class="dark-mode">Preservação do meio ambiente</h3>
-              <p>O tratamento de esgoto remove substâncias poluentes e impurezas antes de serem devolvidas aos corpos
-                d'água, contribuindo para a proteção dos ecossistemas aquáticos e a preservação da fauna e flora
-                local....
-                <p class="red"><b>para saber mais clicke aqui!!!</b></p>
-              </p>
-            </a>
-          </div>
-          <div class="benefit">
-            <a href="#modal3">
-              <h3 class="dark-mode">Redução de impactos ambientais</h3>
-              <p>O sistema de esgoto diminui a contaminação do solo e do lençol freático, evitando a poluição do meio
-                ambiente. Além disso, ele contribui para a redução de odores desagradáveis e a proliferação de insetos e
-                roedores...
-                <p class="red"><b>para saber mais clicke aqui!!!</b></p>
-              </p>
-            </a>
-          </div>
-          <div class="benefit">
-            <a href="#modal4">
-              <h3 class="dark-mode">Prevenção de enchentes e alagamentos</h3>
-              <p>Um sistema de esgoto eficiente evita o acúmulo de água nas vias
-                públicas, reduzindo o risco de enchentes e alagamentos em áreas
-                urbanas. Ele garante o correto escoamento dos resíduos líquidos,
-                mantendo as ruas mais seguras e transitáveis...
-                <p class="red"><b>para saber mais clicke aqui!!!</b></p>
-              </p>
-            </a>
-          </div>
-          <div class="benefit">
-            <a href="#modal5">
-              <h3 class="dark-mode">Melhoria na qualidade de vida</h3>
-              <p>Com um sistema de esgoto adequado, as condições de higiene e
-                saneamento básico são melhoradas, proporcionando um ambiente
-                mais limpo, saudável e seguro para a população. Isso contribui
-                para a qualidade de vida e bem-estar das comunidades...
-                <p class="red"><b>para saber mais clicke aqui!!!</b></p>
-              </p>
-            </a>
-          </div>
-          <div class="benefit">
-            <a href="#modal6">
-              <h3 class="dark-mode">Protegendo o Meio Ambiente</h3>
-              <p>O sistema de esgoto desempenha um papel crucial na proteção do meio ambiente, evitando a contaminação
-                de rios e lençóis freáticos, além de contribuir para a redução da poluição atmosférica....
-                <p class="red"><b>para saber mais clicke aqui!!!</b></p>
-              </p>
-            </a>
-          </div>
+            <ul class="nav">
+                <li><a class="active" href="index.html" title="Inicio">Inicio</a></li>
+                <li><a href="benefits.html" title="benefits">Beneficios</a></li>
+                <li><a href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
+                <li><a href="#" title="Artigos">Artigos</a></li>
+                <li><a href="#" title="Contato">Contato</a></li>
+            </ul>
+        </div><!--content-->
+    </header>
+    <input type="checkbox" id="darkModeCheckbox" class="switch-checkbox">
+    <label class="check" for="darkModeCheckbox"></label>
+    <main class="dark-mode">
+        <section class="dark-mode">
+            <div class="intro">
+                <h1>Bem-vindo ao Agrinho 2023!</h1>
+                <p>Olá! Meu nome é Gladson Coronado e estou muito empolgado em participar do Agrinho deste ano. Neste
+                    espaço, quero compartilhar com vocês um pouco sobre a importância do <span
+                        class="highlight">saneamento básico</span> e da <span class="highlight">preservação
+                        ambiental</span> para o nosso futuro.</p>
+                <p>Vamos aprender juntos sobre como cuidar do meio ambiente e promover a sustentabilidade. Aqui estão
+                    alguns dos tópicos que abordaremos:</p>
+                <ul class="resume">
+                    <li>Compreensão da poluição e seus impactos</li>
+                    <li>Soluções de tratamento de esgoto</li>
+                    <li>Benefícios do saneamento básico para a sociedade</li>
+                    <li>Engajamento e participação ativa</li>
+                </ul>
+                <p class="about-me">Sobre mim: Meu nome é <span class="highlight">Gladson</span> sou um estudante
+                    do segundo ano do ensino médio da escola Cleoracy Aparecida Gil, tenho 15 anos sempre procuro
+                    aprender mais.</p>
+                <div class="hide_img">
+                    <ul class="slides">
+                        <input type="radio" name="radio-btn" id="img-1" checked />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <img src="imagens/esgoto_poluicao1.jpg" alt="">
+                            </div>
+                            <div class="nav">
+                                <label for="img-4" class="prev"></label>
+                                <label for="img-2" class="next"></label>
+                            </div>
+                        </li>
+                        <input type="radio" name="radio-btn" id="img-2" checked />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <img src="imagens/esgoto_poluicao2.jpg" alt="">
+                            </div>
+                            <div class="nav">
+                                <label for="img-1" class="prev"></label>
+                                <label for="img-3" class="next"></label>
+                            </div>
+                        </li>
+                        <input type="radio" name="radio-btn" id="img-3" checked />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <img src="imagens/esgoto_tratamento1.jpg" alt="">
+                            </div>
+                            <div class="nav">
+                                <label for="img-2" class="prev"></label>
+                                <label for="img-4" class="next"></label>
+                            </div>
+                        </li>
+                        <input type="radio" name="radio-btn" id="img-4" checked />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <img src="imagens/esgoto_tratamento2.jpg" alt="">
+                            </div>
+                            <div class="nav">
+                                <label for="img-3" class="prev"></label>
+                                <label for="img-1" class="next"></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo-footer.png" alt="Logo do Site">
+                    <h2>Nome do Site</h2>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2023 Nome do Site. Todos os direitos reservados.</p>
+                    <p>Desenvolvido por <a href="#">Gladson Coronado</a></p>
+                </div>
+                <nav class="footer-nav">
+                    <ul class="footer-menu">
+                        <li><a href="index.html" title="Beneficios">Beneficios</a></li>
+                        <li><a class="active" href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="logo-footer.png" alt="Logo do Site">
-        <h2>Nome do Site</h2>
-      </div>
-      <div class="footer-info">
-        <p>&copy; 2023 Nome do Site. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <a href="#">Gladson Coronado</a></p>
-      </div>
-      <nav class="footer-nav">
-        <ul class="footer-menu">
-          <li><a class="active" href="index.html" title="Beneficios">Beneficios</a></li>
-          <li><a href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+    </footer>
 </body>
+
 
 </html>
