@@ -2,11 +2,50 @@
     text-align: center;
     padding: 40px;
     background-color: #fff;
-    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 10px, 0.1);
-    border: 1px solid black;
     margin: 0 10%;
     background-color: rgba(255, 255, 255, 0);
+    transition: ease 0.5s;
+    position: relative;
+    animation: animateIntro 2s;
+}
+
+@keyframes animateIntro {
+    0% {
+        transform: scaleY(0);
+    }
+
+
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.intro:before,
+.intro:after {
+    content: '';
+    border-radius: 10px;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform-origin: center;
+    animation: animateLines 2s;
+}
+
+@keyframes animateLines {
+    0% {
+        transform: scaleX(0);
+    }
+
+
+
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 .intro h1 {
@@ -105,7 +144,6 @@
     opacity: 0;
     z-index: 1;
     cursor: pointer;
-    transition: opacity 0.2s;
     color: white;
     font-size: 18px;
     text-align: center;
@@ -127,7 +165,7 @@
     text-align: center;
     line-height: 50px;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: opacity 0.5s;
 }
 
 .slides .prev::before,
@@ -177,23 +215,7 @@ input:checked+.slide-container .nav label {
 }
 
 /* Estilos para telas menores */
-@media screen and (max-width: 768px) {
-    .intro {
-        padding: 20px;
-    }
 
-    .intro h1 {
-        font-size: 24px;
-    }
-
-    .intro p {
-        font-size: 16px;
-    }
-
-    .intro ul {
-        padding-left: 20px;
-    }
-}
 
 /* Estilos para telas ainda menores */
 @media screen and (max-width: 480px) {

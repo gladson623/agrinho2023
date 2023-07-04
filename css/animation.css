@@ -25,7 +25,7 @@ html {
 /* Animação de slide-in para o menu */
 @keyframes slide-in {
     0% {
-        transform: translateY(-1.25rem);
+        transform: translateY(-20px);
     }
 
     100% {
@@ -72,18 +72,13 @@ html {
     }
 }
 
-.benefit {
-    animation-name: fade-in-benefits;
-    animation-duration: var(--animation-duration-1);
-    animation-fill-mode: both;
-    animation-delay: var(--animation-delay-05);
-}
+
 
 /* Animação de slide-up para o rodapé */
 @keyframes slide-up {
     0% {
         opacity: 0;
-        transform: translateY(1.25rem);
+        transform: translateY(20px);
     }
 
     100% {
@@ -96,7 +91,7 @@ html {
 @keyframes slide-in-menu {
     0% {
         opacity: 0;
-        transform: translateX(-1.25rem);
+        transform: translateX(-20px);
     }
 
     100% {
@@ -116,7 +111,7 @@ html {
 @keyframes fade-in-title {
     0% {
         opacity: 0;
-        transform: translateY(-20rem);
+        transform: translateY(-320px);
     }
 
     100% {
@@ -163,9 +158,6 @@ html {
     }
 }
 
-.section-intro p,
-.section-content .benefit p {}
-
 .animation {
     animation-duration: var(--animation-duration);
     animation-fill-mode: both;
@@ -185,24 +177,24 @@ html {
 }
 
 .carrosel {
-    width: 37.5rem;
-    height: 15.625rem;
-    outline: 0.1875rem solid black;
+    width: 600px;
+    height: 250px;
+    outline: 3px solid black;
     overflow: hidden;
     margin: auto;
-    box-shadow: 0.625rem 0.625rem 0.9375rem rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
 }
 
 .carrosel ul {
     display: flex;
     list-style: none;
-    width: 112.5rem;
-    height: 15.625rem;
+    width: 1800px;
+    height: 250px;
 }
 
 .carrosel ul li img {
-    width: 37.5rem;
-    height: 15.625rem;
+    width: 600px;
+    height: 250px;
     pointer-events: none;
 }
 
@@ -212,20 +204,20 @@ html {
     background-color: black;
 }
 
-@media (max-width: 37.5rem) {
+@media (max-width: 600px) {
     .carrosel ul li img {
-        width: 12.5rem;
-        height: 12.5rem;
+        width: 200px;
+        height: 200px;
     }
 
     .carrosel ul {
-        width: 50rem;
-        height: 15.625rem;
+        width: 800px;
+        height: 250px;
     }
 
     .carrosel {
-        width: 12.5rem;
-        height: 12.5rem;
+        width: 200px;
+        height: 200px;
     }
 
     .carrosel li {
@@ -237,85 +229,85 @@ html {
 @keyframes slide {
     0% {
 
-        left: 0rem;
+        left: 0px;
     }
 
     20% {
-        left: 0rem;
+        left: 0px;
     }
 
     25% {
-        left: -37.5rem;
+        left: -600px;
     }
 
     45% {
-        left: -37.5rem;
+        left: -600px;
     }
 
     50% {
-        left: -75rem;
+        left: -1200px;
     }
 
     70% {
-        left: -75rem;
+        left: -1200px;
     }
 
     75% {
-        left: -112.5rem;
+        left: -1800px;
     }
 
     95% {
-        left: -112.5rem;
+        left: -1800px;
     }
 
     100% {
-        left: 0rem;
+        left: 0px;
     }
 }
 
 @keyframes slideMobile {
     0% {
 
-        left: 0rem;
+        left: 0px;
     }
 
     20% {
 
-        left: 0rem;
+        left: 0px;
     }
 
     25% {
 
-        left: -12.5rem;
+        left: -200px;
     }
 
     45% {
 
-        left: -12.5rem;
+        left: -200px;
     }
 
     50% {
 
-        left: -25rem;
+        left: -400px;
     }
 
     70% {
 
-        left: -25rem;
+        left: -400px;
     }
 
     75% {
 
-        left: -37.5rem;
+        left: -600px;
     }
 
     95% {
 
-        left: -37.5rem;
+        left: -600px;
     }
 
     100% {
 
-        left: 0rem;
+        left: 0px;
     }
 }

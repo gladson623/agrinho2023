@@ -1,27 +1,28 @@
 .section-intro {
 
-    padding: 0rem;
+    padding: 0px;
     text-align: center;
 }
 
 .section-intro h1 {
-    font-size: 3rem;
-    margin-bottom: 1.25rem;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
 .section-intro p {
-    font-size: 1.125rem;
+    font-size: 18px;
 }
 
 .section-imagens {
 
-    padding: 2.5rem 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 .imagem {
-    margin-bottom: 1.25rem;
+    margin-bottom: 20px;
 }
+
 
 
 
@@ -32,26 +33,27 @@
 }
 
 .benefit {
-
-    padding: 1.25rem;
+    padding: 20px;
     text-align: center;
-    width: calc(33.33% - 1.25rem);
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: ease 0.3s;
 }
 
 .benefit:hover {
-    transform: translateY(-0.3125rem);
+    transform: translateY(-5px);
 }
 
 .benefit h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.625rem;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .benefit p {
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 p.red {
@@ -80,12 +82,12 @@ p.red {
 }
 
 .modal_item {
-    border-radius: 0.25rem;
+    border-radius: 4px;
     position: relative;
     width: 50%;
     background: #fff;
     padding: 1.5em;
-    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal_item div .back {
@@ -95,32 +97,32 @@ p.red {
 }
 
 .modal_item div p:last-child {
-    margin-bottom: 3.125rem;
+    margin-bottom: 50px;
 }
 
 .modal_item h3 {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 24px;
     color: #333;
 }
 
 .back {
     color: #585858;
-    font-size: 1.125rem;
+    font-size: 18px;
     text-align: center;
     background-color: #87CEEB;
-    border-radius: 0.1875rem;
+    border-radius: 3px;
     transition: background-color 0.3s;
     padding: 5% 45%;
 }
 
 .close {
     position: absolute;
-    top: 0.625rem;
-    right: 0.9375rem;
+    top: 10px;
+    right: 15px;
     color: black;
     text-decoration: none;
-    font-size: 1.125rem;
+    font-size: 18px;
 }
 
 .back:hover {
@@ -134,18 +136,18 @@ p.red {
 
 .modal_content {
     margin-top: 1.5em;
-    font-size: 1.125rem;
+    font-size: 18px;
     line-height: 1.5;
     color: #555;
 }
 
 .footer-btn-back {
-    width: 9.375rem;
-    padding: 0.625rem;
+    width: 150px;
+    padding: 10px;
     text-decoration: none;
     background-color: #cfcca8;
     color: #000;
-    border-radius: 0.1875rem;
+    border-radius: 3px;
     text-align: center;
     margin-top: 2em;
     font-weight: bold;
@@ -154,4 +156,38 @@ p.red {
 
 .footer-btn-back:hover {
     background-color: #b0ad85;
+}
+
+
+
+.benefit:after,
+.benefit:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: ease 0.5s;
+    pointer-events: none;
+}
+
+.benefit:before {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    transform: scaleY(0);
+}
+
+.benefit:after {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transform: scaleX(0);
+}
+
+.benefit:hover:before {
+    transform: scaleY(1);
+}
+
+.benefit:hover:after {
+    transform: scaleX(1);
 }

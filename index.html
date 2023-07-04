@@ -12,142 +12,33 @@
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/responsive.css">
     <style>
-        .slides {
-            padding: 0;
-            width: 50%;
-            height: 30vw;
-            display: block;
-            margin: 0 auto;
-            position: relative;
-        }
 
-        .slides * {
-            user-select: none;
-            -ms-user-select: none;
-            -moz-user-select: none;
-        }
-
-        .slides input {
-            display: none;
-        }
-
-        .slide-container {
-            display: block;
-        }
-
-        .slide {
-            top: 0;
-            opacity: 0;
-            width: 100%;
-            height: 30vw;
-            display: block;
-            position: absolute;
-            transform: scale(0);
-            transition: all 0.7s ease-in-out;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .nav label {
-            width: 30%;
-            height: 100%;
-            display: none;
-            position: absolute;
-            opacity: 0;
-            z-index: 1;
-            cursor: pointer;
-            transition: opacity 0.2s;
-            color: white;
-            font-size: 18px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.171);
-        }
-
-        .slide:hover+nav label {
-            opacity: 0.5s;
-        }
-
-        .nav label:hover {
-            opacity: 1;
-        }
-
-        .slides .prev,
-        .slides .next {
-            color: white;
-            font-size: 24px;
-            text-align: center;
-            line-height: 50px;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .slides .prev::before,
-        .slides .next::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 15px 0 15px 20px;
-            border-color: transparent transparent transparent yellow;
-            transform: translateY(-50%);
-        }
-
-        .slides .prev::before {
-            left: 45%;
-            transform: translateY(-50%) rotate(180deg);
-        }
-
-        .slides .next::before {
-            right: 45%;
-
-        }
-
-        .slides .prev:hover,
-        .slides .next:hover {
-            opacity: 1;
-        }
-
-        .nav .next {
-            right: 0;
-        }
-
-        .nav .prev {
-            left: 0;
-        }
-
-        input:checked+.slide-container .slide {
-            opacity: 1;
-            transform: scale(1);
-            transition: opacity 1s ease-in-out;
-        }
-
-        input:checked+.slide-container .nav label {
-            display: block;
-        }
     </style>
 </head>
 
 <body class="dark-mode overlay">
     <header class="header">
         <div class="content">
+
             <a href="#" target="_blank" class="logo"><img src="img/logo.png" title="Loop Nerd"></a>
 
             <input class="mobile-btn" type="checkbox" id="mobile-btn" />
             <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
 
+            <div>
+                <div class="main">
+                    <h1>Menu</h1>
+                </div>
+            </div>
+
             <ul class="nav">
+
                 <li><a class="active" href="index.html" title="Inicio">Inicio</a></li>
                 <li><a href="benefits.html" title="benefits">Beneficios</a></li>
                 <li><a href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
-                <li><a href="#" title="Artigos">Artigos</a></li>
-                <li><a href="#" title="Contato">Contato</a></li>
             </ul>
-        </div><!--content-->
+            <!--content-->
+        </div>
     </header>
     <input type="checkbox" id="darkModeCheckbox" class="switch-checkbox">
     <label class="check" for="darkModeCheckbox"></label>
@@ -168,7 +59,7 @@
                     <li>Engajamento e participação ativa</li>
                 </ul>
                 <p class="about-me">Sobre mim: Meu nome é <span class="highlight">Gladson</span> sou um estudante
-                    do segundo ano do ensino médio da escola Cleoracy Aparecida Gil, tenho 15 anos sempre procuro
+                    do segundo ano do ensino médio da escola Cleoracy Aparecida Gil, tenho 17 anos sempre procuro
                     aprender mais.</p>
                 <div class="hide_img">
                     <ul class="slides">
