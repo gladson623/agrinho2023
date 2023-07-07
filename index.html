@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/disadvantages.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
     <style>
 
     </style>
@@ -20,10 +21,11 @@
     <header class="header">
         <div class="content">
 
-            <a href="#" target="_blank" class="logo"><img src="img/logo.png" title="Loop Nerd"></a>
+            <a href="#" target="_blank" class="logo"><img src="imagens/logo.png" title="Loop Nerd"></a>
 
             <input class="mobile-btn" type="checkbox" id="mobile-btn" />
-            <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
+            <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"><span
+                        class="hamburguerExpand"></span></span></label>
 
             <div>
                 <div class="main">
@@ -37,82 +39,89 @@
                 <li><a href="benefits.html" title="benefits">Beneficios</a></li>
                 <li><a href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
             </ul>
-            <!--content-->
         </div>
     </header>
     <input type="checkbox" id="darkModeCheckbox" class="switch-checkbox">
     <label class="check" for="darkModeCheckbox"></label>
     <main class="dark-mode">
-        <section class="dark-mode">
-            <div class="intro">
-                <h1>Bem-vindo ao Agrinho 2023!</h1>
-                <p>Olá! Meu nome é Gladson Coronado e estou muito empolgado em participar do Agrinho deste ano. Neste
-                    espaço, quero compartilhar com vocês um pouco sobre a importância do <span
-                        class="highlight">saneamento básico</span> e da <span class="highlight">preservação
-                        ambiental</span> para o nosso futuro.</p>
-                <p>Vamos aprender juntos sobre como cuidar do meio ambiente e promover a sustentabilidade. Aqui estão
-                    alguns dos tópicos que abordaremos:</p>
-                <ul class="resume">
-                    <li>Compreensão da poluição e seus impactos</li>
-                    <li>Soluções de tratamento de esgoto</li>
-                    <li>Benefícios do saneamento básico para a sociedade</li>
-                    <li>Engajamento e participação ativa</li>
-                </ul>
-                <p class="about-me">Sobre mim: Meu nome é <span class="highlight">Gladson</span> sou um estudante
-                    do segundo ano do ensino médio da escola Cleoracy Aparecida Gil, tenho 17 anos sempre procuro
-                    aprender mais.</p>
-                <div class="hide_img">
-                    <ul class="slides">
-                        <input type="radio" name="radio-btn" id="img-1" checked />
-                        <li class="slide-container">
-                            <div class="slide">
-                                <img src="imagens/esgoto_poluicao1.jpg" alt="">
-                            </div>
-                            <div class="nav">
-                                <label for="img-4" class="prev"></label>
-                                <label for="img-2" class="next"></label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-btn" id="img-2" checked />
-                        <li class="slide-container">
-                            <div class="slide">
-                                <img src="imagens/esgoto_poluicao2.jpg" alt="">
-                            </div>
-                            <div class="nav">
-                                <label for="img-1" class="prev"></label>
-                                <label for="img-3" class="next"></label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-btn" id="img-3" checked />
-                        <li class="slide-container">
-                            <div class="slide">
-                                <img src="imagens/esgoto_tratamento1.jpg" alt="">
-                            </div>
-                            <div class="nav">
-                                <label for="img-2" class="prev"></label>
-                                <label for="img-4" class="next"></label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-btn" id="img-4" checked />
-                        <li class="slide-container">
-                            <div class="slide">
-                                <img src="imagens/esgoto_tratamento2.jpg" alt="">
-                            </div>
-                            <div class="nav">
-                                <label for="img-3" class="prev"></label>
-                                <label for="img-1" class="next"></label>
-                            </div>
-                        </li>
+        <article>
+            <section class="dark-mode">
+                <div class="intro">
+                    <h1>Bem-vindo ao Agrinho 2023!</h1>
+                    <p>Olá! Meu nome é Gladson Coronado e estou muito empolgado em participar do Agrinho deste ano.
+                        Neste
+                        espaço, quero compartilhar com vocês um pouco sobre a importância do <span
+                            class="highlight highlight1">saneamento
+                            básico</span> e da
+                        <span class="highlight highlight2">preservação
+                            ambiental</span> para o nosso futuro.
+                    </p>
+                    <p>Vamos aprender juntos sobre como cuidar do meio ambiente e promover a sustentabilidade. Aqui
+                        estão
+                        alguns dos tópicos que abordaremos:</p>
+                    <ul class="resume">
+                        <li><strong>Compreensão da poluição e seus impactos</strong></li>
+                        <li><strong>Soluções de tratamento de esgoto</strong></li>
+                        <li><strong>Benefícios do saneamento básico para a sociedade</strong></li>
+                        <li><strong>Engajamento e participação ativa</strong></li>
                     </ul>
+                    <p class="about-me">Sobre mim: Meu nome é <span class="highlight highlight3">Gladson</span> sou um
+                        estudante
+                        do segundo ano do ensino médio da escola Cleoracy Aparecida Gil, tenho 17 anos sempre procuro
+                        aprender mais.</p>
+                    <div class="hide_img">
+                        <ul class="slides">
+                            <input type="radio" name="radio-btn" id="img-1" checked />
+                            <li class="slide-container">
+                                <div class="slide">
+                                    <img src="imagens/esgoto_poluicao1.jpg" alt="">
+                                </div>
+                                <div class="nav">
+                                    <label for="img-4" class="prev"></label>
+                                    <label for="img-2" class="next"></label>
+                                </div>
+                            </li>
+                            <input type="radio" name="radio-btn" id="img-2" checked />
+                            <li class="slide-container">
+                                <div class="slide">
+                                    <img src="imagens/esgoto_poluicao2.jpg" alt="">
+                                </div>
+                                <div class="nav">
+                                    <label for="img-1" class="prev"></label>
+                                    <label for="img-3" class="next"></label>
+                                </div>
+                            </li>
+                            <input type="radio" name="radio-btn" id="img-3" checked />
+                            <li class="slide-container">
+                                <div class="slide">
+                                    <img src="imagens/esgoto_tratamento1.jpg" alt="">
+                                </div>
+                                <div class="nav">
+                                    <label for="img-2" class="prev"></label>
+                                    <label for="img-4" class="next"></label>
+                                </div>
+                            </li>
+                            <input type="radio" name="radio-btn" id="img-4" checked />
+                            <li class="slide-container">
+                                <div class="slide">
+                                    <img src="imagens/esgoto_tratamento2.jpg" alt="">
+                                </div>
+                                <div class="nav">
+                                    <label for="img-3" class="prev"></label>
+                                    <label for="img-1" class="next"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </article>
     </main>
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="logo-footer.png" alt="Logo do Site">
+                    <img src="imagens/logo.png" alt="Logo do Site">
                     <h2>Nome do Site</h2>
                 </div>
                 <div class="footer-info">
@@ -121,10 +130,9 @@
                 </div>
                 <nav class="footer-nav">
                     <ul class="footer-menu">
-                        <li><a href="index.html" title="Beneficios">Beneficios</a></li>
-                        <li><a class="active" href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a class="active" href="index.html" title="Inicio">Inicio</a></li>
+                        <li><a href="benefits.html" title="Beneficios">Beneficios</a></li>
+                        <li><a href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
                     </ul>
                 </nav>
             </div>

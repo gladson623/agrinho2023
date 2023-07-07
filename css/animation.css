@@ -3,7 +3,6 @@
     --animation-delay-05: 0.5s;
 }
 
-/* Animação de fade-in para o cabeçalho */
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -22,7 +21,6 @@ html {
     animation-delay: var(--animation-delay-05);
 }
 
-/* Animação de slide-in para o menu */
 @keyframes slide-in {
     0% {
         transform: translateY(-20px);
@@ -39,7 +37,6 @@ html {
     animation-fill-mode: both;
 }
 
-/* Animação de zoom-in para as seções */
 @keyframes zoom-in {
     0% {
         opacity: 0;
@@ -61,7 +58,6 @@ html {
     animation-delay: var(--animation-delay-05);
 }
 
-/* Animação de fade-in para os benefícios */
 @keyframes fade-in-benefits {
     0% {
         opacity: 0;
@@ -72,9 +68,6 @@ html {
     }
 }
 
-
-
-/* Animação de slide-up para o rodapé */
 @keyframes slide-up {
     0% {
         opacity: 0;
@@ -87,7 +80,6 @@ html {
     }
 }
 
-/* Animação de slide-in para os itens do menu */
 @keyframes slide-in-menu {
     0% {
         opacity: 0;
@@ -107,7 +99,6 @@ html {
     animation-delay: var(--animation-delay-05);
 }
 
-/* Animação de fade-in para os títulos das seções */
 @keyframes fade-in-title {
     0% {
         opacity: 0;
@@ -127,7 +118,6 @@ html {
     animation-fill-mode: both;
 }
 
-/* Animação de zoom-in para as imagens das seções */
 @keyframes zoom-in-image {
     0% {
         opacity: 0;
@@ -147,7 +137,6 @@ html {
     animation-delay: var(--animation-delay-05);
 }
 
-/* Animação de fade-in para os parágrafos das seções */
 @keyframes fade-in-paragraph {
     0% {
         opacity: 0;

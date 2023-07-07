@@ -77,7 +77,6 @@ header.header ul.nav {
 .header li a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s ease;
   padding: 0 10px;
   float: right;
   transition: all 0.5s ease;
@@ -100,17 +99,17 @@ header.header ul.nav {
   transition: max-height .2s ease-out;
 }
 
-/* menu icon */
 .header .mobile-icon {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 8px 20px 50px 20px;
+  padding: 10px 20px 20px 20px;
   position: relative;
   user-select: none;
 }
 
-.header .mobile-icon .hamburguer {
+.header .mobile-icon .hamburguer,
+.header .mobile-icon .hamburguerExpand {
   background: #fff;
   display: block;
   height: 2px;
@@ -120,7 +119,9 @@ header.header ul.nav {
 }
 
 .header .mobile-icon .hamburguer:before,
-.header .mobile-icon .hamburguer:after {
+.header .mobile-icon .hamburguer:after,
+.header .mobile-icon .hamburguerExpand:before,
+.header .mobile-icon .hamburguerExpand:after {
   background: #fff;
   content: '';
   display: block;
@@ -130,7 +131,8 @@ header.header ul.nav {
   width: 100%;
 }
 
-.header .mobile-icon .hamburguer:before {
+.header .mobile-icon .hamburguer:before,
+.header .mobile-icon .hamburguerExpand:before {
   top: 5px;
 }
 
@@ -138,7 +140,6 @@ header.header ul.nav {
   top: -5px;
 }
 
-/* menu btn */
 .header .mobile-btn {
   display: none;
 }
@@ -147,16 +148,33 @@ header.header ul.nav {
   max-height: 240px;
 }
 
+.header .mobile-btn:checked~.mobile-icon .hamburguerExpand {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.header .mobile-btn:checked~.mobile-icon .hamburguerExpand:before {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.header .mobile-btn:checked~.mobile-icon .hamburguerExpand:after {
+  transform: translateY(60px) translateX(53px) rotate(135deg);
+  pointer-events: none;
+}
+
 .header .mobile-btn:checked~.mobile-icon .hamburguer {
   background: transparent;
 }
 
 .header .mobile-btn:checked~.mobile-icon .hamburguer:before {
-  transform: rotate(-45deg);
+  transform: translateX(-39px) translateY(134px);
+  width: 50px;
+  pointer-events: none;
 }
 
 .header .mobile-btn:checked~.mobile-icon .hamburguer:after {
-  transform: rotate(45deg);
+  transform: translateX(-60px) translateY(183px);
+  width: 68px;
+  pointer-events: none;
 }
 
 .header .mobile-btn:checked~.mobile-icon:not(.steps) .hamburguer:before,
@@ -194,6 +212,8 @@ header.header ul.nav {
 .header .logo {
   font-size: 24px;
   font-weight: bold;
+  width: 30px;
+  height: 30px;
   text-decoration: none;
   color: #fff;
   position: absolute;
@@ -293,10 +313,7 @@ div.main {
   margin: 10px;
 }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-}
+
 
 .footer-logo img {
   margin: 10px 0px;
@@ -363,17 +380,11 @@ div.main {
   padding: 15px;
 }
 
-
-
-
-
-/* Estilos do modo escuro */
 #modo-escuro:checked~body {
   background-color: #333;
   color: #fff;
 }
 
-/* Estilos para o switch de alternância */
 .switch-container {
   position: fixed;
   top: 10px;
