@@ -1,0 +1,495 @@
+body .sink .faucets .cold-water {
+    top: -70px;
+    margin-top: 103%;
+    width: 10px;
+    height: 60px;
+    background: #d7e0e2;
+    border-radius: 0.3125em;
+    cursor: pointer;
+    left: -5px;
+}
+
+
+body .sink .faucets .cold-water::before {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: -40%;
+    width: 200%;
+    height: 30px;
+    border-top-left-radius: 0.3125em;
+    border-top-right-radius: 0.3125em;
+    rotate: -90deg;
+}
+
+body .sink .faucets .cold-water::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.75em;
+    border-top-left-radius: 0.3125em;
+    border-top-right-radius: 0.3125em;
+
+}
+
+
+
+@keyframes water {
+    0% {
+        height: 0;
+    }
+
+    25% {
+        height: 7.5em;
+    }
+
+    50% {
+        height: 15em;
+    }
+
+    75% {
+        height: 22.5em;
+    }
+
+    100% {
+        height: 30em;
+    }
+}
+
+@keyframes waterDisappear {
+    0% {
+        height: 30em;
+    }
+
+
+    100% {
+        margin: 30em;
+        height: 0;
+    }
+}
+
+@keyframes timeOut {
+    0% {
+        pointer-events: none;
+    }
+
+
+    100% {
+        pointer-events: auto;
+    }
+}
+
+@keyframes timeOut2 {
+    0% {
+        pointer-events: none;
+    }
+
+
+    100% {
+        pointer-events: auto;
+    }
+}
+
+
+
+@keyframes camouflage {
+    0% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #3498db;
+    }
+}
+
+@keyframes camouflage2 {
+    0% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #3498db;
+    }
+}
+
+@keyframes camouflage3 {
+    0% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #3498db;
+    }
+}
+
+
+body .sink,
+.sinks {
+
+    position: relative;
+    width: 17em;
+    height: 0em;
+}
+
+body .sink .faucets {
+    position: relative;
+    top: 650px;
+    left: 37vw;
+    margin: 0 auto;
+    width: 4.5em;
+    height: 6em;
+}
+
+body .sink .faucets .output,
+body .sink .faucets .cold-water {
+    position: relative;
+    float: left;
+}
+
+body .sink .faucets .output {
+    margin-top: 18%;
+    width: 1.25em;
+    height: 6em;
+    background: #d7e0e2;
+    border-radius: 0.3125em;
+}
+
+body .sink .faucets .output::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.618em;
+    background: #f2f5f5;
+    border-radius: 0.3125em;
+    border-bottom: 5px solid gray;
+}
+
+
+
+.camouflage {
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    background-color: #3498db;
+    animation: camouflage 10s forwards ease;
+}
+
+body .sink .faucets .cold-water::after {
+    background: #3498db;
+}
+
+.valve-btn:checked~*.cold-water::after {
+    background: red;
+}
+
+
+body .sink .faucets .cold-water::before {
+    background: #8f9294;
+    border-right: 1px solid black;
+}
+
+
+
+/* .valve-btn {
+    display: none; 
+    pointer-events: none;
+} */
+
+@keyframes openWater {
+    0% {
+        left: -5;
+        rotate: 0;
+    }
+
+    100% {
+        left: -20px;
+        rotate: -13deg;
+    }
+}
+
+@keyframes closeWater {
+    0% {
+        left: -20px;
+        rotate: -13deg;
+    }
+
+    100% {
+        left: -5px;
+        rotate: 0;
+    }
+}
+
+@keyframes openWaterBase {
+    0% {
+        left: -40%;
+        rotate: -90deg;
+    }
+
+    100% {
+        top: 95%;
+        left: 1px;
+        rotate: -76deg;
+    }
+}
+
+@keyframes closeWaterBase {
+    0% {
+        top: 95%;
+        left: 0px;
+        rotate: -76deg;
+    }
+
+    100% {
+        left: -4px;
+        rotate: -90deg;
+    }
+
+}
+
+
+
+.valve-btn:checked~.output .camouflage .water {
+    animation: water 4s ease forwards;
+}
+
+
+
+.valve-btn:checked~.cold-water {
+    animation: timeOut 75s ease, openWater 0.5s ease forwards;
+}
+
+
+
+.valve-btn:checked~.cold-water::before {
+    animation: openWaterBase 0.5s ease forwards;
+}
+
+
+.valve-btn:not(:checked)~.output .camouflage .water {
+    animation: waterDisappear 4s ease forwards;
+}
+
+
+.valve-btn:not(:checked)~.cold-water::before {
+    animation: closeWaterBase 0.5s ease;
+}
+
+.valve-btn:not(:checked)~.cold-water {
+    animation: timeOut2 65s ease, closeWater 0.5s ease forwards;
+}
+
+.sink-body {
+    all: initial;
+    position: absolute;
+    left: 0;
+    width: 90%;
+    height: 10rem;
+    border: 10px solid black;
+    border-top: none;
+    border-radius: 0.3125em;
+    background-color: transparent;
+    padding: auto;
+}
+
+.sink-body::after {
+    content: "";
+    position: absolute;
+    top: 158px;
+    left: 95px;
+    width: 30px;
+    height: 10rem;
+    border-left: 10px solid black;
+    border-top: 10px solid #b6daf2;
+    border-right: 10px solid black;
+    background-color: transparent;
+    background-position-y: 100%;
+
+}
+
+
+
+
+.sinks {
+    position: relative;
+    top: 305px;
+    left: -100px;
+    z-index: 0;
+    background-color: transparent;
+    height: 350px;
+}
+
+.valve-btn:checked~.sinks .sink-body .sink-water {
+    position: absolute;
+    animation: background-growth 14s forwards;
+    animation-delay: 7s;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.valve-btn:not(:checked)~.sinks .sink-body .sink-water {
+    position: absolute;
+    animation: background-growth2 14s forwards;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes background-growth {
+    0% {
+        top: 100%;
+        height: 0;
+        background-color: #3498db;
+    }
+
+    100% {
+        top: 0%;
+        height: 100%;
+        background-color: #3498db;
+    }
+}
+
+@keyframes background-growth2 {
+
+    0% {
+        top: 0%;
+        height: 100%;
+        background-color: #3498db;
+    }
+
+    100% {
+        top: 100%;
+        height: 0;
+        background-color: #3498db;
+    }
+}
+
+.valve-btn {
+    pointer-events: none;
+    display: none;
+}
+
+
+.can-water {
+    top: -105%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    width: 30px;
+    top: 105%;
+    height: 0%;
+    background-color: #3498db;
+}
+
+.valve-btn:not(:checked)~* .can-water {
+    height: 100%;
+    position: absolute;
+    left: 105px;
+    top: 105%;
+    z-index: 1;
+    width: 30px;
+    animation: background-can-water2 7s forwards;
+    animation-delay: 13s;
+}
+
+.valve-btn:checked~* .water-camouflage {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    animation: water-camouflage 3.6s ease;
+}
+
+.valve-btn:checked~* .can-water {
+    height: 100%;
+    position: absolute;
+    left: 105px;
+    top: 105%;
+    z-index: 1;
+    width: 30px;
+    animation: background-can-water 3s forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes water-camouflage {
+
+    0% {
+        background-color: white;
+    }
+
+    99% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes background-can-water {
+
+    0% {
+        top: 105%;
+        height: 0%;
+        background-color: #3498db;
+    }
+
+    100% {
+        top: 105%;
+        height: 100%;
+        background-color: #3498db;
+    }
+}
+
+@keyframes background-can-water2 {
+
+
+    0% {
+        top: 105%;
+        height: 100%;
+        background-color: #3498db;
+    }
+
+    100% {
+        top: 205%;
+        height: 0%;
+        background-color: #3498db;
+    }
+
+
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.sink-body {
+    animation: open 20s ease !important;
+    animation-delay: 0.5s;
+}

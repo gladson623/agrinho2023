@@ -47,6 +47,36 @@
   }
 }
 
+@media screen and (max-width: 1250px) {
+  body .sink .faucets {
+    left: 37vw !important;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  body .sink .faucets {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  body .sink .faucets {
+    left: 42vw !important;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  body .sink .faucets {
+    left: 45vw !important;
+  }
+}
+
+@media screen and (min-width: 3400px) {
+  body .sink .faucets {
+    left: 47vw !important;
+  }
+}
+
 @media screen and (max-width: 650px) {
   header div.main {
     margin-top: 55px;
