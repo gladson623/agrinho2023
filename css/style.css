@@ -92,6 +92,7 @@ header.header ul.nav {
   display: inline-block;
   width: 50px;
   margin-right: 0px;
+  pointer-events: none;
 }
 
 .header .nav {
