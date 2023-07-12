@@ -337,3 +337,7 @@ input:checked+.slide-container .nav label {
         font-size: 14px;
     }
 }
+
+.section {
+    padding: auto;
+}

@@ -200,10 +200,20 @@ body .sink .faucets .cold-water::after {
 }
 
 .valve-btn:not(:checked)~*.cold-water::after {
-    animation: delay 37s ease;
+    animation: delay2 37s ease;
 }
 
 @keyframes delay {
+    0% {
+        background-color: red;
+    }
+
+    100% {
+        background: #3498db;
+    }
+}
+
+@keyframes delay2 {
     0% {
         background-color: red;
     }
