@@ -260,12 +260,12 @@ input:checked+.slide-container .nav label {
 
 .highlight1::before,
 .highlight1::after {
-    background-image: url(../imagens/esgoto_poluicao1.jpg);
+    background-image: url(../imagens/foto14.jpg);
 }
 
 .highlight2::before,
 .highlight2::after {
-    background-image: url(../imagens/esgoto_poluicao2.jpg);
+    background-image: url(../imagens/foto12.JPG);
 }
 
 .highlight3::before,

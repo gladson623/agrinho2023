@@ -32,20 +32,20 @@
 }
 
 .parallax1 {
-    background-image: url('../imagens/esgoto_poluicao1.jpg');
+    background-image: url('../imagens/foto10.JPG');
     background-color: red;
 }
 
 .parallax2 {
-    background-image: url('../imagens/esgoto_poluicao2.jpg');
+    background-image: url('../imagens/foto11.jpg');
 }
 
 .parallax3 {
-    background-image: url('../imagens/esgoto_tratamento1.jpg');
+    background-image: url('../imagens/foto9.JPG');
 }
 
 .parallax4 {
-    background-image: url('../imagens/esgoto_tratamento2.jpg');
+    background-image: url('../imagens/foto12.jpg');
 }
 
 .parallax-inner p {

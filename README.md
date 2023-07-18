@@ -1,5 +1,3 @@
-# agrinho 2023
-
 # Site de Saneamento Básico
 
 Este repositório contém o código-fonte do site de Saneamento Básico, que aborda temas relacionados à importância do saneamento básico, preservação ambiental e os benefícios de ter um sistema de esgoto adequado.
@@ -12,9 +10,9 @@ O tratamento adequado do esgoto é uma ação transformadora com impactos signif
 
 O site é organizado da seguinte maneira:
 
-- `index.html`: Página inicial que apresenta uma introdução sobre o que será visto neste site, além de uma breve apresentação sobre o criador.
+- `index.html`: Página inicial que apresenta uma introdução sobre o que será visto neste site, além de uma breve apresentação sobre o criador. Nele também há imagens que aparecerão de forma animada ao passar o mouse nas palavras grifadas, além de um lindo carrossel de imagens para melhor entendimento.
 
-- `benefits.html`: Página que destaca os benefícios de ter um sistema de esgoto adequado. Nessa página, são apresentados modais para mostrar mais conteúdos. Também possui um slideshow e, para dispositivos com largura maior que 1030px, uma linda animação interativa sobre uma torneira, esta animação pode demorar um pouco para aparecer.
+- `benefits.html`: Página que destaca os benefícios de ter um sistema de esgoto adequado. Nessa página, são apresentados modais para mostrar mais conteúdos. Também possui um slideshow e, para dispositivos com largura maior que 1030px, uma linda animação interativa sobre uma torneira. Esta animação pode demorar um pouco para aparecer.
 
 - `disadvantages.html`: Página que aborda as desvantagens de não ter um sistema de esgoto. Nela, são apresentados carrosséis de imagens com textos para um melhor entendimento do usuário. No final da página, haverá uma representação de uma fossa séptica usando HTML e CSS, além de uma descrição do que é uma fossa séptica.
 
@@ -39,7 +37,6 @@ Para visualizar o site, basta acessar o seguinte link:
 [Site de Saneamento Básico](https://gladson623.github.io/agrinho2023/)
 
 O site será carregado no navegador e você poderá navegar pelas diferentes páginas e explorar o conteúdo relacionado ao saneamento básico.
-
 
 ## Créditos
 
