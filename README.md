@@ -4,6 +4,10 @@
 
 Este repositório contém o código-fonte do site de Saneamento Básico, que aborda temas relacionados à importância do saneamento básico, preservação ambiental e os benefícios de ter um sistema de esgoto adequado.
 
+## Ação que transforma o mundo: Tratamento de Esgoto
+
+O tratamento adequado do esgoto é uma ação transformadora com impactos significativos no mundo. Ao tratar o esgoto, removemos contaminantes, preservando o meio ambiente, protegendo a saúde pública e impulsionando o desenvolvimento socioeconômico. O tratamento de esgoto reduz a poluição de rios e lagos, previne doenças transmitidas pela água e melhora a qualidade de vida das comunidades. É uma medida essencial para um mundo mais saudável e sustentável.
+
 ## Estrutura do Site
 
 O site é organizado da seguinte maneira:
@@ -12,7 +16,7 @@ O site é organizado da seguinte maneira:
 
 - `benefits.html`: Página que destaca os benefícios de ter um sistema de esgoto adequado. Nessa página, são apresentados modais para mostrar mais conteúdos. Também possui um slideshow e, para dispositivos com largura maior que 1030px, uma linda animação interativa sobre uma torneira, esta animação pode demorar um pouco para aparecer.
 
-- `disadvantages.html`: Página que aborda as desvantagens de não ter um sistema de esgoto. Nela, são apresentados carrosséis de imagens com textos para um maior entendimento do usuário.
+- `disadvantages.html`: Página que aborda as desvantagens de não ter um sistema de esgoto. Nela, são apresentados carrosséis de imagens com textos para um melhor entendimento do usuário. No final da página, haverá uma representação de uma fossa séptica usando HTML e CSS, além de uma descrição do que é uma fossa séptica.
 
 ## Header
 

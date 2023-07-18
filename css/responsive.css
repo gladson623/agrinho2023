@@ -154,3 +154,19 @@
 
 
 }
+
+@media screen and (max-width: 605px) {
+
+  div.description p.mobileText2 {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+
+  div.description p.mobileText,
+  .septic-tank {
+    display: none;
+  }
+}

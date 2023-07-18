@@ -231,10 +231,7 @@ body .sink .faucets .cold-water::before {
 
 
 
-/* .valve-btn {
-    display: none; 
-    pointer-events: none;
-} */
+
 
 @keyframes openWater {
     0% {
