@@ -282,7 +282,7 @@ input:checked+.slide-container .nav label {
 
 .highlight2::before,
 .highlight2::after {
-    background-image: url(../imagens/foto12.JPG);
+    background-image: url(../imagens/foto12.jpg);
 }
 
 .highlight3::before,
