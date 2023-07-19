@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .septic-tank {
+            width: 70%;
+            height: 620px;
+            position: relative;
+            animation: dayNightAnimation 180s infinite;
+            border: 2px solid #aaa;
+            margin: 50px auto;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            overflow: visible;
+        }
+
+        .tank {
+            width: 50%;
+            height: 520px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(to bottom, #ccdae0, #767d81);
+            border: 2px solid #aaa;
+            border-radius: 6px;
+            overflow: visible;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1
+        }
+
+        .scum-layer {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            background: linear-gradient(to bottom, #e8f2f4, #f5c100, #f5c100, #f5c100, #f5c100, #f5c100, #f5c100);
+            border-radius: 6px 6px 0 0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .liquid-layer {
+            width: 100%;
+            height: 160px;
+            position: absolute;
+            top: 60px;
+            background: linear-gradient(to bottom, #e8f2f4, #7bb9d3, #6ca8c9, #5989a9, #3f6e86);
+            border-bottom: 1px solid #fff;
+            animation: waveAnimation 2s linear infinite alternate;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .sludge-layer {
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            top: 260px;
+            background-color: #575757;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .divider {
+            width: 50%;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000;
+            border-radius: 6px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .inlet-pipe {
+            width: 40px;
+            height: 120px;
+            position: absolute;
+            top: 50%;
+            left: -60px;
+            transform: translate(0, -50%);
+            background: linear-gradient(to bottom, #ccc, #999);
+            border-radius: 6px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .outlet-pipe {
+            width: 40px;
+            height: 120px;
+            position: absolute;
+            top: 50%;
+            right: -60px;
+            transform: translate(0, -50%);
+            background: linear-gradient(to bottom, #ccc, #999);
+            border-radius: 6px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .pipe-connector {
+            width: 20px;
+            height: 30px;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #999;
+            border-radius: 50%;
+        }
+
+
+        .dirty {
+            height: 90%;
+            width: 100%;
+            animation: moveRightDirty 10s linear infinite;
+            background-color: #361e00;
+        }
+
+        .clean {
+            background-color: #6ca8c9;
+            animation: moveRightClean 10s linear infinite;
+            height: 90%;
+            width: 100%;
+
+        }
+
+        @keyframes moveRightClean {
+            0% {
+                width: 0;
+                margin-left: 0;
+            }
+
+            20% {
+                width: 20%;
+                margin-left: 5%;
+            }
+
+            90% {
+                margin-left: 80%;
+                width: 20%;
+            }
+
+            100% {
+                margin-left: 100%;
+                width: 0;
+            }
+        }
+
+        @keyframes moveRightDirty {
+            0% {
+                width: 0;
+                margin-left: 0;
+            }
+
+            20% {
+                width: 20%;
+                margin-left: 5%;
+            }
+
+
+            100% {
+                margin-left: 100%;
+                width: 20%;
+            }
+        }
+
+
+        .pipe1 {
+            width: 30vw;
+            height: 10px;
+            position: absolute;
+            bottom: -14px;
+            left: 16vw;
+            transform: translateX(-50%);
+            background-color: #999;
+            z-index: -1;
+        }
+
+        .pipe2 {
+            width: 30vw;
+            height: 10px;
+            position: absolute;
+            bottom: -14px;
+            left: -14vw;
+            transform: translateX(-50%);
+            background-color: #999;
+            z-index: -1;
+        }
+
+
+
+        .overflow-pipe {
+            width: 80px;
+            height: 120px;
+            position: absolute;
+            bottom: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(to bottom, #ccc, #999);
+            border-radius: 6px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .ground {
+            width: 100%;
+            height: 120px;
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(to bottom, #6e3d00, #361e00);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .label.inlet-label {
+            top: 200px;
+            left: -100px;
+            color: black;
+            background-color: #ccc;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .label.outlet-label {
+            top: 200px;
+            right: -120px;
+            background-color: #ccc;
+            color: black;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .label.overflow-label {
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ccc;
+            color: black;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .grass {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 120px;
+            background: linear-gradient(to bottom, #01ff01, #004b00);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .label {
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s;
+            z-index: 1;
+        }
+
+        .label:hover {
+            padding: 8px;
+        }
+
+
+
+
+
+        .overflow-label {
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ccc;
+            color: black;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .scum-label {
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f5c100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .liquid-label {
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #7bb9d3;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .sludge-label {
+            top: 320px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #575757;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .septic-tank:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 20px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .septic-tank:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 20px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .bubble-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .bubble {
+            width: 6px;
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            position: absolute;
+            animation: bubbleAnimation 3s ease-in-out infinite;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes bubbleAnimation {
+            0% {
+                top: 100%;
+                opacity: 1;
+            }
+
+            50% {
+                top: 0;
+                opacity: 0.6;
+            }
+
+            100% {
+                top: -100%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes waveAnimation {
+            0% {
+                top: 60px;
+                height: 160px;
+            }
+
+            50% {
+                top: 50px;
+                height: 170px;
+            }
+
+            100% {
+                top: 60px;
+                height: 160px;
+            }
+        }
+
+
+        .scum-layer {
+            background: linear-gradient(to bottom, #e8f2f4, #f5c100, #f5c100, #f5c100, #f5c100, #f5c100, #f5c100, #f5c100, #f5c100);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .sludge-layer {
+            background: linear-gradient(to bottom, #575757, #3d3d3d, #292929, #212121, #1a1a1a);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .liquid-layer {
+            background: linear-gradient(to bottom, #e8f2f4, #7bb9d3, #6ca8c9, #5989a9, #3f6e86, #2d4f63);
+            animation-duration: 6s;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .bubble {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            position: absolute;
+            animation: bubbleAnimation 6s ease-in-out infinite;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .bubble.bubble1 {
+            width: 4px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.6);
+            animation-delay: 0s;
+            top: 30px;
+            left: 10px;
+        }
+
+        .bubble.bubble2 {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            animation-delay: 1s;
+            top: 80px;
+            left: 90px;
+        }
+
+        .bubble.bubble3 {
+            width: 6px;
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.7);
+            animation-delay: 2s;
+            top: 130px;
+            left: 200px;
+        }
+
+        .bubble.bubble4 {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 1);
+            animation-delay: 3s;
+            top: 200px;
+            left: 150px;
+        }
+
+        .bubble.bubble5 {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation-delay: 4s;
+            top: 250px;
+            left: 300px;
+        }
+
+        .bubble.bubble6 {
+            width: 6px;
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.6);
+            animation-delay: 5s;
+            top: 280px;
+            left: 400px;
+        }
+
+        .bubble.bubble7 {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            animation-delay: 2.5s;
+            top: 320px;
+            left: 50px;
+        }
+
+        .bubble.bubble8 {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            animation-delay: 3.5s;
+            top: 350px;
+            left: 350px;
+        }
+
+        .bubble.bubble9 {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation-delay: 4.5s;
+            top: 380px;
+            left: 200px;
+        }
+
+        .bubble.bubble10 {
+            width: 6px;
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.6);
+            animation-delay: 5.5s;
+            top: 430px;
+            left: 100px;
+        }
+
+        .bubble.bubble11 {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            animation-delay: 6s;
+            top: 480px;
+            left: 300px;
+        }
+
+
+        @keyframes dayNightAnimation {
+            0% {
+                background-color: #c3e3f1;
+            }
+
+            50% {
+                background-color: #102b3e;
+            }
+
+            100% {
+                background-color: #c3e3f1;
+            }
+        }
+
+
+        .sun {
+            width: 80px;
+            height: 80px;
+            background-color: #f7dd46;
+            border-radius: 50%;
+            position: absolute;
+            animation: rotateSun 120s linear infinite;
+        }
+
+        .moon {
+            width: 80px;
+            height: 80px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            position: absolute;
+            animation: rotateMoon 120s linear infinite;
+        }
+
+
+
+        @keyframes rotateSun {
+            0% {
+                transform: rotate(0deg);
+                top: 0;
+            }
+
+            50% {
+                transform: rotate(180deg);
+                top: 80%;
+            }
+
+            100% {
+                transform: rotate(360deg);
+                top: 0;
+            }
+        }
+
+        @keyframes rotateMoon {
+            0% {
+                transform: rotate(0deg);
+                right: 0;
+                top: 80%;
+            }
+
+            50% {
+                transform: rotate(180deg);
+                right: 0;
+                top: 0;
+            }
+
+            100% {
+                transform: rotate(360deg);
+                right: 0;
+                top: 80%;
+            }
+        }
+
+        .sun,
+        .moon {
+            animation-timing-function: linear;
+        }
+
+        .septic-tank {
+            animation-duration: 120s;
+        }
+
+        .title-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .title-line::before,
+        .title-line::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background-color: #333;
+        }
+
+        .title-line::before {
+            margin-right: 10px;
+        }
+
+        .title-line::after {
+            margin-left: 10px;
+        }
+
+        .title-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 50%;
+            margin: auto;
+            margin-top: 150px;
+        }
+
+        .description {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .description p:first-child {
+            margin-top: 0;
+        }
+
+        .description p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 1100px) {
+            .pipe1 {
+                width: 30vw;
+                height: 10px;
+                position: absolute;
+                bottom: -14px;
+                left: 17vw;
+                transform: translateX(-50%);
+                background-color: #999;
+                z-index: -1;
+            }
+
+            .pipe2 {
+                width: 30vw;
+                height: 10px;
+                position: absolute;
+                bottom: -14px;
+                left: -13vw;
+                transform: translateX(-50%);
+                background-color: #999;
+                z-index: -1;
+            }
+
+            .label.outlet-label {
+                top: 200px;
+                right: -60px;
+                background-color: #ccc;
+                color: black;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .label.inlet-label {
+                top: 200px;
+                left: -60px;
+                color: black;
+                background-color: #ccc;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .label {
+                position: absolute;
+                font-size: 10px;
+                font-weight: bold;
+                text-align: center;
+                margin: 0;
+                padding: 5px;
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+                transition: all 0.5s;
+                z-index: 1;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .pipe1 {
+                width: 30vw;
+                height: 10px;
+                position: absolute;
+                bottom: -14px;
+                left: 18vw;
+                transform: translateX(-50%);
+                background-color: #999;
+                z-index: -1;
+            }
+
+            .pipe2 {
+                width: 30vw;
+                height: 10px;
+                position: absolute;
+                bottom: -14px;
+                left: -12vw;
+                transform: translateX(-50%);
+                background-color: #999;
+                z-index: -1;
+            }
+        }
+
+        @media (max-width: 370px) {
+            .pipe1 {
+                width: 30vw;
+                height: 10px;
+                position: absolute;
+                bottom: -14px;
+                left: 19vw;
+                transform: translateX(-50%);
+                background-color: #999;
+                z-index: -1;
+            }
+
+            .pipe2 {
+                width: 30vw;
+                height: 10px;
+                position: absolute;
+                bottom: -14px;
+                left: -11vw;
+                transform: translateX(-50%);
+                background-color: #999;
+                z-index: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="septic-tank">
+        <div class="sun"></div>
+        <div class="moon"></div>
+        <div class="tank">
+            <div class="wave scum-layer"></div>
+            <div class="wave liquid-layer"></div>
+            <div class="sludge-layer"></div>
+            <div class="bubble-container">
+                <div class="bubble bubble1"></div>
+                <div class="bubble bubble2"></div>
+                <div class="bubble bubble3"></div>
+                <div class="bubble bubble4"></div>
+                <div class="bubble bubble5"></div>
+                <div class="bubble bubble6"></div>
+                <div class="bubble bubble7"></div>
+                <div class="bubble bubble8"></div>
+                <div class="bubble bubble9"></div>
+                <div class="bubble bubble10"></div>
+                <div class="bubble bubble11"></div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="inlet-pipe">
+            <div class="pipe-connector"></div>
+            <div class="pipe1">
+                <div class="dirty"></div>
+            </div>
+        </div>
+        <div class="outlet-pipe">
+            <div class="pipe-connector"></div>
+            <div class="pipe2">
+                <div class="clean"></div>
+            </div>
+        </div>
+        <div class="overflow-pipe"></div>
+        <div class="ground"></div>
+        <div class="grass"></div>
+        <div class="label inlet-label">
+            <p>Entrada de Esgoto</p>
+        </div>
+        <div class="label outlet-label">
+            <p>Saída de Efluente Tratado</p>
+        </div>
+        <div class="label overflow-label">
+            <p>Transbordo</p>
+        </div>
+        <div class="label scum-label">
+            <p>Crosta de Espuma</p>
+        </div>
+        <div class="label liquid-label">
+            <p>Efluente Líquido</p>
+        </div>
+        <div class="label sludge-label">
+            <p>Lodo</p>
+        </div>
+    </div>
+</body>
+
+</html>

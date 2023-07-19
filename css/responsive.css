@@ -1,7 +1,6 @@
 @media screen and (max-width: 899.5px) {
   header.header ul.nav {
     list-style-type: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     margin-left: auto;

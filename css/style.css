@@ -60,7 +60,6 @@ p {
 
 header.header ul.nav {
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
   margin-left: auto;
@@ -70,8 +69,11 @@ header.header ul.nav {
 }
 
 .header div {
-  margin-right: 10%;
   width: 100%;
+}
+
+.header div ul {
+  margin-right: 10%;
 }
 
 .header li a {
@@ -473,6 +475,10 @@ input[type="checkbox"]:checked~.check {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
+input[type="checkbox"]:checked~.card {
+  background: #181818;
+}
+
 .check::before {
   content: '';
   position: absolute;
@@ -512,9 +518,28 @@ input[type="checkbox"]:checked~main section {
   color: white;
 }
 
+input[type="checkbox"]:checked~* .card,
+input[type="checkbox"]:checked~* .card * {
+  transition: 0.5s;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+input[type="checkbox"]:checked~* .card * h4,
+input[type="checkbox"]:checked~* .title-line * {
+  color: rgb(180, 180, 180);
+
+}
+
+
 input[type="checkbox"]:checked~* .dark-mode {
   transition: 0.5s;
-  color: rgb(200, 200, 200);
+  color: rgb(226, 223, 223);
+}
+
+input[type="checkbox"]:checked~* .title-line::before,
+input[type="checkbox"]:checked~* .title-line::after {
+  background-color: white;
 }
 
 input[type="checkbox"]:checked~* .carrosel {
