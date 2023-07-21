@@ -151,20 +151,35 @@ header.header ul.nav {
   max-height: 240px;
 }
 
+.agrinho-info h1 span.span {
+  font-size: 35px;
+
+}
+
+.agrinho-info h1:hover {
+  transform: scale(1.01);
+}
+
+.agrinho-info p:hover {
+  transform: scale(1.01);
+}
+
+
 .agrinho-info h1 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
   color: #fff;
   max-width: 600px;
+  transition: all 1s;
 }
 
 div.agrinho-info {
   width: 50%;
   padding-right: 5px;
   border-right: 1px solid white;
-  pointer-events: none;
+
 }
 
 .agrinho-info p {
@@ -173,9 +188,13 @@ div.agrinho-info {
   text-align: center;
   max-width: 600px;
   color: #fff;
+  transition: all 1s;
+  padding: 10px auto;
 }
 
-@media (max-width: 510px) {
+
+
+@media (max-width: 570px) {
   div.agrinho-info {
     display: none !important;
   }
@@ -184,6 +203,10 @@ div.agrinho-info {
 @media (max-width: 899.5px) {
   div.agrinho-info {
     display: none;
+  }
+
+  .last {
+    margin-bottom: 50px;
   }
 }
 
@@ -242,6 +265,7 @@ div.agrinho-info {
     border-radius: 6px;
 
   }
+
 
   .header ul li a.active {
     pointer-events: none;
