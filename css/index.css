@@ -29,7 +29,7 @@
     padding: 40px;
     background-color: var(--intro-bg-color);
     box-shadow: 0 2px 4px var(--intro-box-shadow-color);
-    margin: 10%;
+    margin: 200px 10%;
     background-color: rgba(255, 255, 255, 0);
     transition: ease var(--intro-transition-duration);
     position: relative;

@@ -196,3 +196,18 @@ p.red {
 .benefit:hover:after {
     transform: scaleX(1);
 }
+
+@media (max-width: 985px) {
+    body main.dark-mode.responsiveMain {
+        height: 80vh;
+        align-items: center;
+        display: flex;
+        min-height: 1000px;
+    }
+}
+
+@media (max-width: 240px) {
+    body main.dark-mode.responsiveMain {
+        min-height: 1400px !important;
+    }
+}
