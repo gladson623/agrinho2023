@@ -90,13 +90,6 @@ header.header ul.nav {
 }
 
 
-.header .logo {
-  display: inline-block;
-  width: 50px;
-  margin-right: 0px;
-  pointer-events: none;
-}
-
 .header .nav {
   max-height: 0;
   transition: max-height .2s ease-out;
@@ -294,13 +287,13 @@ div.agrinho-info {
 .header .logo {
   font-size: 24px;
   font-weight: bold;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   text-decoration: none;
   color: #fff;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
 }
 
 
