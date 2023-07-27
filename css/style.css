@@ -198,6 +198,12 @@ div.agrinho-info * {
 @media (max-width: 570px) {
   div.agrinho-info {
     display: none !important;
+    height: 0px;
+    width: 0px;
+  }
+
+  div.agrinho-info * {
+    display: none !important;
   }
 }
 
