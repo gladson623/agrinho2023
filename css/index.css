@@ -87,14 +87,18 @@
     padding-left: 40px;
 }
 
+.intro ul.resume li {
+    text-align: justify;
+}
+
 .intro li {
     margin-bottom: 10px;
 }
 
 .intro .about-me {
     margin-top: 30px;
-    text-align: left;
     font-style: italic;
+    text-align: justify;
 }
 
 .intro .highlight {
@@ -283,6 +287,10 @@ input:checked+.slide-container .nav label {
 .highlight2::before,
 .highlight2::after {
     background-image: url(../imagens/foto12.JPG);
+}
+
+.intro .highlight {
+    position: static;
 }
 
 .highlight3::before,

@@ -112,9 +112,9 @@ header.header ul.nav {
 }
 
 .header .mobile-icon .hamburguer:before,
+.header .mobile-icon * .hamburguer2:before,
 .header .mobile-icon .hamburguer:after,
-.header .mobile-icon .hamburguerExpand:before,
-.header .mobile-icon .hamburguerExpand:after {
+.header .mobile-icon .hamburguerExpand:before {
   background: #fff;
   content: '';
   display: block;
@@ -125,6 +125,7 @@ header.header ul.nav {
 }
 
 .header .mobile-icon .hamburguer:before,
+.header .mobile-icon * .hamburguer2:before,
 .header .mobile-icon .hamburguerExpand:before {
   top: 5px;
 }
@@ -273,10 +274,7 @@ div.agrinho-info * {
   transform: translateY(-5px) rotate(90deg);
 }
 
-.header .mobile-btn:checked~.mobile-icon .hamburguerExpand:after {
-  transform: translateY(60px) translateX(53px) rotate(135deg);
-  pointer-events: none;
-}
+
 
 .header .mobile-btn:checked~.mobile-icon .hamburguer {
   background: transparent;
@@ -288,6 +286,12 @@ div.agrinho-info * {
   pointer-events: none;
 }
 
+.header .mobile-btn:checked~.mobile-icon * .hamburguer2:before {
+  transform: translateX(-8px) translateY(85px);
+  width: 25px;
+  pointer-events: none;
+}
+
 .header .mobile-btn:checked~.mobile-icon .hamburguer:after {
   transform: translateX(-60px) translateY(183px);
   width: 68px;
@@ -295,6 +299,7 @@ div.agrinho-info * {
 }
 
 .header .mobile-btn:checked~.mobile-icon:not(.steps) .hamburguer:before,
+.header .mobile-btn:checked~.mobile-icon:not(.steps) * .hamburguer2:before,
 .header .mobile-btn:checked~.mobile-icon:not(.steps) .hamburguer:after {
   top: 0;
 }
