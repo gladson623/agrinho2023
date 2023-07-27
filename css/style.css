@@ -186,6 +186,7 @@ div.agrinho-info * {
   padding: 10px auto;
 }
 
+
 .agrinho-info * {
   cursor: default;
 }
@@ -196,18 +197,17 @@ div.agrinho-info * {
 
 @media (max-width: 570px) {
   div.agrinho-info {
-    display: none !important;
+    opacity: 0 !important;
   }
 }
 
 @keyframes dowText2 {
   0% {
-    top: 130px;
-    opacity: 1;
+    opacity: 0;
+
   }
 
   100% {
-    top: 50px;
     opacity: 0;
   }
 }
@@ -220,6 +220,7 @@ div.agrinho-info * {
     border-right: 1px solid white;
     animation: dowText2 0.2s forwards;
   }
+
 
 
 
@@ -641,15 +642,20 @@ input[type="checkbox"]:checked~* .card * {
 }
 
 input[type="checkbox"]:checked~* .card * h4,
-input[type="checkbox"]:checked~* .title-line * {
+input[type="checkbox"]:checked~* .title-line *,
+input[type="checkbox"]:checked~* h1,
+input[type="checkbox"]:checked~* h2,
+input[type="checkbox"]:checked~* h3 {
   color: rgb(180, 180, 180);
 
 }
 
+* {
+  transition: 0.08s;
+}
 
 input[type="checkbox"]:checked~* .dark-mode {
   transition: 0.5s;
-  color: rgb(226, 223, 223);
 }
 
 input[type="checkbox"]:checked~* .title-line::before,
