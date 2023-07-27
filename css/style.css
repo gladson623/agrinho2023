@@ -197,7 +197,7 @@ div.agrinho-info * {
 
 @media (max-width: 570px) {
   div.agrinho-info {
-    opacity: 0 !important;
+    display: none !important;
   }
 }
 
