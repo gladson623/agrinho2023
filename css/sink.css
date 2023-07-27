@@ -145,10 +145,15 @@ body .sink,
     height: 0em;
 }
 
+body .sink {
+    width: 0em;
+    height: 0em;
+}
+
 body .sink .faucets {
     position: relative;
     top: 650px;
-    left: 37vw;
+    left: 47vw;
     margin: 0 auto;
     width: 4.5em;
     height: 6em;
@@ -437,6 +442,13 @@ body .sink .faucets .cold-water::before {
     animation: water-camouflage 3.6s ease;
 }
 
+input[type="checkbox"]:checked~* .valve-btn:checked~* .water-camouflage {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    animation: water-camouflage2 3.6s ease;
+}
+
 .valve-btn:checked~* .can-water {
     height: 100%;
     position: absolute;
@@ -456,6 +468,23 @@ body .sink .faucets .cold-water::before {
 
     99% {
         background-color: white;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes water-camouflage2 {
+
+    0% {
+        background-color: #181818;
+
+    }
+
+    99% {
+        background-color: #181818;
+
     }
 
     100% {

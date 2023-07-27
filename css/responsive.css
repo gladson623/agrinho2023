@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 1250px) {
   body .sink .faucets {
-    left: 37vw !important;
+    left: 46vw !important;
   }
 }
 
@@ -60,19 +60,13 @@
 
 @media screen and (min-width: 1350px) {
   body .sink .faucets {
-    left: 42vw !important;
-  }
-}
-
-@media screen and (min-width: 2200px) {
-  body .sink .faucets {
-    left: 45vw !important;
+    left: 49vw !important;
   }
 }
 
 @media screen and (min-width: 3400px) {
   body .sink .faucets {
-    left: 47vw !important;
+    left: 50vw !important;
   }
 }
 
