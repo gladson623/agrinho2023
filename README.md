@@ -40,4 +40,4 @@ O site será carregado no navegador e você poderá navegar pelas diferentes pá
 
 ## Créditos
 
-Este site foi desenvolvido por Gladson Coronado. Para mais informações, entre em contato através deste [link](https://api.whatsapp.com/send?phone=5544991168932), ou pelo número de WhatsApp: +55 (44) 99116-8932.
+Este site foi desenvolvido por Gladson Coronado estudante do Colégio Estadual Cleoracy Aparecida Gil. Para mais informações, entre em contato através deste [link](https://api.whatsapp.com/send?phone=5544991168932), ou pelo número de WhatsApp: +55 (44) 99116-8932.
