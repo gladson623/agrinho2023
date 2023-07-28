@@ -204,7 +204,7 @@ p.red {
 }
 
 div.container h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 @media screen and (max-width: 64.375rem) {

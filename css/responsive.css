@@ -66,8 +66,8 @@
   }
 
   a.benefit {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
   }
 
 }
@@ -220,7 +220,7 @@
   }
 
   .septic-tank .label.inlet-label {
-    left: 0rem;
+    left: -0.8125rem;
   }
 
   .septic-tank .inlet-pipe {
@@ -228,7 +228,7 @@
   }
 
   .septic-tank .label.outlet-label {
-    right: 0rem;
+    right: -0.8125rem;
   }
 
   .septic-tank div.label {
@@ -242,6 +242,7 @@
 
   div.septic-tank {
     width: 90%;
+    height: 32.75rem;
   }
 }
 
@@ -255,7 +256,7 @@
   }
 }
 
-@media screen and (max-width: 15rem) {
+@media screen and (max-width: 13.125rem) {
   .septic-tank {
     display: none;
   }
