@@ -50,8 +50,8 @@
 
 @media screen and (max-width: 19.375rem) {
 
-  main {
-    margin-top: 0rem;
+  div.container1 {
+    padding-top: 1rem !important;
   }
 
   body .sink .faucets {
@@ -63,6 +63,11 @@
   div.sinks {
     height: 0rem;
     width: 0rem;
+  }
+
+  a.benefit {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
 }
