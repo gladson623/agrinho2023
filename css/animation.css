@@ -23,7 +23,7 @@ html {
 
 @keyframes slide-in {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(-1.25rem);
     }
 
     100% {
@@ -71,7 +71,7 @@ html {
 @keyframes slide-up {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(1.25rem);
     }
 
     100% {
@@ -83,7 +83,7 @@ html {
 @keyframes slide-in-menu {
     0% {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-1.25rem);
     }
 
     100% {
@@ -102,7 +102,7 @@ html {
 @keyframes fade-in-title {
     0% {
         opacity: 0;
-        transform: translateY(-320px);
+        transform: translateY(-20rem);
     }
 
     100% {
@@ -166,24 +166,24 @@ html {
 }
 
 .carrosel {
-    width: 600px;
-    height: 250px;
-    outline: 3px solid black;
+    width: 37.5rem;
+    height: 15.625rem;
+    outline: 0.1875rem solid black;
     overflow: hidden;
     margin: auto;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0.625rem 0.625rem 0.9375rem rgba(0, 0, 0, 0.7);
 }
 
 .carrosel ul {
     display: flex;
     list-style: none;
-    width: 1800px;
-    height: 250px;
+    width: 112.5rem;
+    height: 15.625rem;
 }
 
 .carrosel ul li img {
-    width: 600px;
-    height: 250px;
+    width: 37.5rem;
+    height: 15.625rem;
     pointer-events: none;
 }
 
@@ -193,20 +193,20 @@ html {
     background-color: black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
     .carrosel ul li img {
-        width: 200px;
-        height: 200px;
+        width: 12.5rem;
+        height: 12.5rem;
     }
 
     .carrosel ul {
-        width: 800px;
-        height: 250px;
+        width: 50rem;
+        height: 15.625rem;
     }
 
     .carrosel {
-        width: 200px;
-        height: 200px;
+        width: 12.5rem;
+        height: 12.5rem;
     }
 
     .carrosel li {
@@ -218,85 +218,85 @@ html {
 @keyframes slide {
     0% {
 
-        left: 0px;
+        left: 0rem;
     }
 
     20% {
-        left: 0px;
+        left: 0rem;
     }
 
     25% {
-        left: -600px;
+        left: -37.5rem;
     }
 
     45% {
-        left: -600px;
+        left: -37.5rem;
     }
 
     50% {
-        left: -1200px;
+        left: -75rem;
     }
 
     70% {
-        left: -1200px;
+        left: -75rem;
     }
 
     75% {
-        left: -1800px;
+        left: -112.5rem;
     }
 
     95% {
-        left: -1800px;
+        left: -112.5rem;
     }
 
     100% {
-        left: 0px;
+        left: 0rem;
     }
 }
 
 @keyframes slideMobile {
     0% {
 
-        left: 0px;
+        left: 0rem;
     }
 
     20% {
 
-        left: 0px;
+        left: 0rem;
     }
 
     25% {
 
-        left: -200px;
+        left: -12.5rem;
     }
 
     45% {
 
-        left: -200px;
+        left: -12.5rem;
     }
 
     50% {
 
-        left: -400px;
+        left: -25rem;
     }
 
     70% {
 
-        left: -400px;
+        left: -25rem;
     }
 
     75% {
 
-        left: -600px;
+        left: -37.5rem;
     }
 
     95% {
 
-        left: -600px;
+        left: -37.5rem;
     }
 
     100% {
 
-        left: 0px;
+        left: 0rem;
     }
 }

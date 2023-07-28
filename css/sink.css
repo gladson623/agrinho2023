@@ -1,12 +1,12 @@
 body .sink .faucets .cold-water {
-    top: -70px;
+    top: -4.375rem;
     margin-top: 103%;
-    width: 10px;
-    height: 60px;
+    width: 0.625rem;
+    height: 3.75rem;
     background: #d7e0e2;
     border-radius: 0.3125em;
     cursor: pointer;
-    left: -5px;
+    left: -0.3125rem;
 }
 
 
@@ -16,7 +16,7 @@ body .sink .faucets .cold-water::before {
     top: 90%;
     left: -40%;
     width: 200%;
-    height: 30px;
+    height: 1.875rem;
     border-top-left-radius: 0.3125em;
     border-top-right-radius: 0.3125em;
     rotate: -90deg;
@@ -152,7 +152,7 @@ body .sink {
 
 body .sink .faucets {
     position: relative;
-    top: 650px;
+    top: 40.625rem;
     left: 47vw;
     margin: 0 auto;
     width: 4.5em;
@@ -176,13 +176,13 @@ body .sink .faucets .output {
 body .sink .faucets .output::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: -0.0625rem;
     left: 0;
     width: 100%;
     height: 1.618em;
     background: #f2f5f5;
     border-radius: 0.3125em;
-    border-bottom: 5px solid gray;
+    border-bottom: 0.3125rem solid gray;
 }
 
 
@@ -231,7 +231,7 @@ body .sink .faucets .cold-water::after {
 
 body .sink .faucets .cold-water::before {
     background: #8f9294;
-    border-right: 1px solid black;
+    border-right: 0.0625rem solid black;
 }
 
 
@@ -245,19 +245,19 @@ body .sink .faucets .cold-water::before {
     }
 
     100% {
-        left: -20px;
+        left: -1.25rem;
         rotate: -13deg;
     }
 }
 
 @keyframes closeWater {
     0% {
-        left: -20px;
+        left: -1.25rem;
         rotate: -13deg;
     }
 
     100% {
-        left: -5px;
+        left: -0.3125rem;
         rotate: 0;
     }
 }
@@ -270,7 +270,7 @@ body .sink .faucets .cold-water::before {
 
     100% {
         top: 95%;
-        left: 1px;
+        left: 0.0625rem;
         rotate: -76deg;
     }
 }
@@ -278,12 +278,12 @@ body .sink .faucets .cold-water::before {
 @keyframes closeWaterBase {
     0% {
         top: 95%;
-        left: 0px;
+        left: 0rem;
         rotate: -76deg;
     }
 
     100% {
-        left: -4px;
+        left: -0.25rem;
         rotate: -90deg;
     }
 
@@ -327,7 +327,7 @@ body .sink .faucets .cold-water::before {
     left: 0;
     width: 90%;
     height: 10rem;
-    border: 10px solid black;
+    border: 0.625rem solid black;
     border-top: none;
     border-radius: 0.3125em;
     background-color: transparent;
@@ -337,13 +337,13 @@ body .sink .faucets .cold-water::before {
 .sink-body::after {
     content: "";
     position: absolute;
-    top: 158px;
-    left: 95px;
-    width: 30px;
+    top: 9.875rem;
+    left: 5.9375rem;
+    width: 1.875rem;
     height: 10rem;
-    border-left: 10px solid black;
-    border-top: 10px solid #b6daf2;
-    border-right: 10px solid black;
+    border-left: 0.625rem solid black;
+    border-top: 0.625rem solid #b6daf2;
+    border-right: 0.625rem solid black;
     background-color: transparent;
     background-position-y: 100%;
 
@@ -354,11 +354,11 @@ body .sink .faucets .cold-water::before {
 
 .sinks {
     position: relative;
-    top: 305px;
-    left: -100px;
+    top: 19.0625rem;
+    left: -6.25rem;
     z-index: 0;
     background-color: transparent;
-    height: 350px;
+    height: 21.875rem;
 }
 
 .valve-btn:checked~.sinks .sink-body .sink-water {
@@ -418,7 +418,7 @@ body .sink .faucets .cold-water::before {
     height: 100%;
     position: absolute;
     z-index: 1;
-    width: 30px;
+    width: 1.875rem;
     top: 105%;
     height: 0%;
     background-color: #3498db;
@@ -427,10 +427,10 @@ body .sink .faucets .cold-water::before {
 .valve-btn:not(:checked)~* .can-water {
     height: 100%;
     position: absolute;
-    left: 105px;
+    left: 6.5625rem;
     top: 105%;
     z-index: 1;
-    width: 30px;
+    width: 1.875rem;
     animation: background-can-water2 7s forwards;
     animation-delay: 13s;
 }
@@ -452,10 +452,10 @@ input[type="checkbox"]:checked~* .valve-btn:checked~* .water-camouflage {
 .valve-btn:checked~* .can-water {
     height: 100%;
     position: absolute;
-    left: 105px;
+    left: 6.5625rem;
     top: 105%;
     z-index: 1;
-    width: 30px;
+    width: 1.875rem;
     animation: background-can-water 3s forwards;
     animation-delay: 3.5s;
 }

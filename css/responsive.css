@@ -1,4 +1,4 @@
-@media screen and (max-width: 899.5px) {
+@media screen and (max-width: 56.2188rem) {
   header.header ul.nav {
     list-style-type: none;
     padding: 0;
@@ -17,93 +17,106 @@
   }
 
   .section-intro h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 
   .section-intro p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .benefit {
-    width: calc(100% - 20px);
+    width: calc(100% - 1.25rem);
   }
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 30rem) {
   .section-intro h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .section-intro p {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
 
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 78.125rem) {
   body .sink .faucets {
     left: 46vw !important;
   }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 64.375rem) {
   body .sink .faucets {
-    display: none !important;
+    opacity: 0;
+    height: 0rem;
+    width: 0rem;
+  }
+
+  body .sink,
+  body .sink~ {
+    height: 0rem !important;
+    width: 0rem !important;
+  }
+
+  div.sinks {
+    width: 0rem;
+    height: 0rem;
   }
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 84.375rem) {
   body .sink .faucets {
     left: 49vw !important;
   }
 }
 
-@media screen and (min-width: 3400px) {
+@media screen and (min-width: 212.5rem) {
   body .sink .faucets {
     left: 50vw !important;
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 40.625rem) {
   header div.main {
-    margin-top: 55px;
+    margin-top: 3.4375rem;
   }
 
 
 
 
   .header .mobile-btn:checked~.mobile-icon .hamburguer:before {
-    transform: translateX(-39px) translateY(190px);
-    width: 50px;
+    transform: translateX(-2.4375rem) translateY(11.875rem);
+    width: 3.125rem;
     pointer-events: none;
   }
 
   .header .mobile-btn:checked~.mobile-icon .hamburguer2:before {
-    transform: translateX(-8px) translateY(140px);
-    width: 25px;
+    transform: translateX(-0.5rem) translateY(8.75rem);
+    width: 1.5625rem;
     pointer-events: none;
   }
 
 
 
   .header .mobile-btn:checked~.mobile-icon .hamburguer:after {
-    transform: translateX(-60px) translateY(240px);
-    width: 68px;
+    transform: translateX(-3.75rem) translateY(15rem);
+    width: 4.25rem;
     pointer-events: none;
   }
 
   .header .mobile-btn:checked~div.agrinho-info {
     display: block;
     position: absolute;
-    top: 130px;
-    border-right: 1px solid white;
+    top: 8.125rem;
+    border-right: 0.0625rem solid white;
   }
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 25rem) {
   .footer-menu {
     display: none;
   }
@@ -113,33 +126,33 @@
   }
 
   .modal_item p {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 
 }
 
 .logo img {
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 22.5rem) {
   .logo img {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
   }
 
   .logo {
-    width: 30px !important;
-    height: 30px !important;
+    width: 1.875rem !important;
+    height: 1.875rem !important;
   }
 
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 68.75rem) {
 
   .logo h1 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .menu {
@@ -148,13 +161,13 @@
 
   .menu-item {
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     background-color: black;
   }
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 46.875rem) {
   .modal_item {
     width: 100%;
     max-height: 70vh;
@@ -168,7 +181,7 @@
 
 }
 
-@media screen and (max-width: 605px) {
+@media screen and (max-width: 37.8125rem) {
 
   div.description p.mobileText2 {
     display: none;
@@ -176,7 +189,7 @@
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 28.125rem) {
 
   div.description p.mobileText,
   .septic-tank {
