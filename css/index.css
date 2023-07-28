@@ -16,8 +16,8 @@
     --highlight-bg-color: #fff;
     --highlight-border-color: #000;
     --highlight-before-after-opacity: 0;
-    --highlight-before-after-width: 200px;
-    --highlight-before-after-height: 200px;
+    --highlight-before-after-width: 100%;
+    --highlight-before-after-height: 160px;
     --highlight-before-after-bg-repeat: no-repeat;
     --highlight-before-after-bg-size: cover;
     --highlight-before-after-bg-position: center center;
@@ -289,9 +289,6 @@ input:checked+.slide-container .nav label {
     background-image: url(../imagens/foto12.JPG);
 }
 
-.intro .highlight {
-    position: static;
-}
 
 .highlight3::before,
 .highlight3::after {
@@ -342,7 +339,7 @@ input:checked+.slide-container .nav label {
     }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 250px) {
     .highlight {
         pointer-events: none;
     }
