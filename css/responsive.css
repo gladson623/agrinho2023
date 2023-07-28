@@ -48,23 +48,23 @@
   }
 }
 
-@media screen and (max-width: 64.375rem) {
+@media screen and (max-width: 19.375rem) {
+
+  main {
+    margin-top: 0rem;
+  }
+
   body .sink .faucets {
     opacity: 0;
     height: 0rem;
     width: 0rem;
   }
 
-  body .sink,
-  body .sink~ {
-    height: 0rem !important;
-    width: 0rem !important;
+  div.sinks {
+    height: 0rem;
+    width: 0rem;
   }
 
-  div.sinks {
-    width: 0rem;
-    height: 0rem;
-  }
 }
 
 @media screen and (min-width: 84.375rem) {
@@ -175,9 +175,28 @@
   }
 
   .hide_img {
-    display: none;
+    width: 100%;
+    height: 15.625rem;
   }
 
+
+
+  .hide_img .slides {
+    width: 100%;
+    height: 15.625rem;
+  }
+
+  .hide_img .slides .slide {
+    width: 100%;
+    height: 15.625rem;
+  }
+
+}
+
+@media screen and (max-width: 12.5rem) {
+  .hide_img {
+    display: none;
+  }
 
 }
 
@@ -189,9 +208,49 @@
 }
 
 
-@media screen and (max-width: 28.125rem) {
+@media screen and (max-width: 25rem) {
 
-  div.description p.mobileText,
+  div.description p.mobileText {
+    display: none;
+  }
+
+  .septic-tank .label.inlet-label {
+    left: 0rem;
+  }
+
+  .septic-tank .inlet-pipe {
+    left: 0rem;
+  }
+
+  .septic-tank .label.outlet-label {
+    right: 0rem;
+  }
+
+  .septic-tank div.label {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .septic-tank .outlet-pipe {
+    right: 0rem;
+  }
+
+  div.septic-tank {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 18.125rem) {
+  div div.pipe1 {
+    left: 21vw;
+  }
+
+  div div.pipe2 {
+    left: -9vw;
+  }
+}
+
+@media screen and (max-width: 15rem) {
   .septic-tank {
     display: none;
   }

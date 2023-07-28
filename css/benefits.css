@@ -43,6 +43,8 @@
     transition: ease 0.3s;
 }
 
+
+
 .benefit:hover {
     transform: translateY(-0.3125rem);
 }
@@ -195,6 +197,19 @@ p.red {
 
 .benefit:hover:after {
     transform: scaleX(1);
+}
+
+@media screen and (max-width: 64.375rem) {
+
+    div.container1 {
+        padding-top: 43.75rem;
+    }
+
+    body .sink .faucets {
+        top: 3.125rem !important;
+    }
+
+
 }
 
 @media (max-width: 61.5625rem) {

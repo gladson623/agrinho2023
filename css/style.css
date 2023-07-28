@@ -313,6 +313,9 @@ div.agrinho-info * {
 
   }
 
+  div.content div div.main h1 {
+    color: white;
+  }
 
   .header ul li a.active {
     pointer-events: none;

@@ -339,7 +339,7 @@ input:checked+.slide-container .nav label {
     }
 }
 
-@media (max-width: 15.625rem) {
+@media (max-width: 12.5rem) {
     .highlight {
         pointer-events: none;
     }
