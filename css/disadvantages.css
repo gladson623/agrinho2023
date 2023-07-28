@@ -14,6 +14,11 @@
     margin-bottom: 1.25rem;
 }
 
+
+.header .mobile-btn:checked~* span.hamburguer::after {
+    background-color: #888888 !important;
+}
+
 .parallax-inner {
     position: relative;
     height: 18.75rem;

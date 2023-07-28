@@ -315,6 +315,10 @@ input:checked+.slide-container .nav label {
     animation: slideOut 0.5s forwards;
 }
 
+.header .mobile-btn:checked~* span.hamburguer2::before {
+    background-color: #888888 !important;
+}
+
 @keyframes slideIn {
     0% {
         transform: translateX(-50%) translateY(-3.125rem);

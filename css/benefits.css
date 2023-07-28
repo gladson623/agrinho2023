@@ -199,10 +199,18 @@ p.red {
     transform: scaleX(1);
 }
 
+.header .mobile-btn:checked~* span.hamburguer::before {
+    background-color: #888888 !important;
+}
+
+div.container h2 {
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 64.375rem) {
 
     div.container1 {
-        padding-top: 43.75rem;
+        padding-top: 43.75rem !important;
     }
 
     body .sink .faucets {
