@@ -30,6 +30,8 @@ O site de Saneamento Básico foi projetado levando em consideração a responsiv
 
 A responsividade é alcançada utilizando práticas de design responsivo e tecnologias como CSS flexbox e media queries. Essas técnicas garantem que o conteúdo seja organizado de forma adequada, os elementos sejam redimensionados e ajustados para caber nas telas menores, e a experiência do usuário seja mantida independentemente do dispositivo utilizado para acessar o site.
 
+Caso o usuário tenha um dispositivo com largura menor que 200px, o site mostrará uma tela dizendo: "O site não é compatível com este dispositivo" e uma carinha triste.
+
 ## Acessando o Site
 
 Para visualizar o site, basta acessar o seguinte link:

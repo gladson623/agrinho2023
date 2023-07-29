@@ -2,150 +2,164 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoSaneamento</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSaneamento</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+
+  <style>
+    
+  </style>
 </head>
 
 <body class="dark-mode overlay">
-    <header class="header">
-        <div class="content">
+  <header class="header">
+    <div class="content">
 
-            <a href="#" target="_blank" class="logo"><img src="imagens/logo.png" title="Logo do Site"
-                    alt="Logo do Site"></a>
+      <a href="#" target="_blank" class="logo"><img src="imagens/logo.png" title="Logo do Site" alt="Logo do Site"></a>
 
-            <input class="mobile-btn" type="checkbox" id="mobile-btn" />
-            <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"><span
-                        class="hamburguerExpand"></span><span class="hamburguer2"></span></label>
+      <input class="mobile-btn" type="checkbox" id="mobile-btn" />
+      <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"><span class="hamburguerExpand"></span><span
+            class="hamburguer2"></span></label>
 
-            <div>
-                <div class="main">
-                    <h1>Menu</h1>
+      <div>
+        <div class="main">
+          <h1>Menu</h1>
+        </div>
+      </div>
+
+      <ul class="nav">
+
+        <li><a class="active" href="index.html" title="Inicio">Inicio</a></li>
+        <li><a href="benefits.html" title="Beneficios">Beneficios</a></li>
+        <li><a class="last" href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
+      </ul>
+
+      <div class="agrinho-info">
+        <h1><span class="span">EcoSaneamento</span> Agrinho 2023</h1>
+        <p>Neste espaço, quero compartilhar com vocês um pouco sobre a importância do
+          saneamento básico e da preservação ambiental para o nosso futuro.</p>
+      </div>
+    </div>
+  </header>
+  <input type="checkbox" id="darkModeCheckbox" class="switch-checkbox">
+  <label class="check" for="darkModeCheckbox"></label>
+  <div id="warning-message">
+    <div>
+      <h1>O site não é compatível com este dispositivo.</h1>
+      <div class="face">
+        <div class="eyes">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+    </div>
+  </div>
+  <main class="dark-mode responsiveMain">
+    <article>
+      <section class="dark-mode section">
+        <div class="intro">
+          <h1>Bem-vindo ao Agrinho 2023!</h1>
+          <p>Olá! Meu nome é Gladson Coronado e estou muito empolgado em participar do Agrinho deste ano.
+            Neste
+            espaço, quero compartilhar com vocês um pouco sobre a importância do <span class="highlight highlight1"
+              aria-label="detalhe tubulação de drenagem de chorume na vala/ trincheira aterro sanitário">saneamento
+              básico</span> e da
+            <span class="highlight highlight2"
+              aria-label="imagem perspectiva aterro sanitário do município de Douradina">preservação
+              ambiental</span> para o nosso futuro.
+          </p>
+          <p>Vamos aprender juntos sobre como cuidar do meio ambiente e promover a sustentabilidade. Aqui
+            estão
+            alguns dos tópicos que abordaremos:</p>
+          <ul class="resume">
+            <li><strong>Compreensão da poluição e seus impactos</strong></li>
+            <li><strong>Soluções de tratamento de esgoto</strong></li>
+            <li><strong>Benefícios do saneamento básico para a sociedade</strong></li>
+            <li><strong>Engajamento e participação ativa</strong></li>
+          </ul>
+          <p class="about-me">Sobre mim: Meu nome é <span class="highlight highlight3"
+              aria-label="foto de Gladson Coronado">Gladson Coronado</span> sou um
+            estudante
+            do segundo ano do ensino médio da escola Cleoracy Aparecida Gil, tenho 17 anos sempre procuro
+            aprender mais.</p>
+          <div class="hide_img">
+            <ul class="slides">
+              <input type="radio" name="radio-btn" id="img-1" checked />
+              <li class="slide-container">
+                <div class="slide">
+                  <img src="imagens/foto1.JPG" alt="disposição da tubulação da galeria">
                 </div>
-            </div>
-
-            <ul class="nav">
-
-                <li><a class="active" href="index.html" title="Inicio">Inicio</a></li>
-                <li><a href="benefits.html" title="Beneficios">Beneficios</a></li>
-                <li><a class="last" href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
+                <div class="nav">
+                  <label for="img-4" class="prev"></label>
+                  <label for="img-2" class="next"></label>
+                </div>
+              </li>
+              <input type="radio" name="radio-btn" id="img-2" />
+              <li class="slide-container">
+                <div class="slide">
+                  <img src="imagens/foto2.JPG" alt="término seção galeria pluvial">
+                </div>
+                <div class="nav">
+                  <label for="img-1" class="prev"></label>
+                  <label for="img-3" class="next"></label>
+                </div>
+              </li>
+              <input type="radio" name="radio-btn" id="img-3" />
+              <li class="slide-container">
+                <div class="slide">
+                  <img src="imagens/foto3.jpg" alt="lagoa de chorume aterro sanitário">
+                </div>
+                <div class="nav">
+                  <label for="img-2" class="prev"></label>
+                  <label for="img-4" class="next"></label>
+                </div>
+              </li>
+              <input type="radio" name="radio-btn" id="img-4" />
+              <li class="slide-container">
+                <div class="slide">
+                  <img src="imagens/foto4.JPG" alt="dissipador energia galeria pluvial">
+                </div>
+                <div class="nav">
+                  <label for="img-3" class="prev"></label>
+                  <label for="img-1" class="next"></label>
+                </div>
+              </li>
             </ul>
-
-            <div class="agrinho-info">
-                <h1><span class="span">EcoSaneamento</span> Agrinho 2023</h1>
-                <p>Neste espaço, quero compartilhar com vocês um pouco sobre a importância do
-                    saneamento básico e da preservação ambiental para o nosso futuro.</p>
-            </div>
+          </div>
         </div>
-    </header>
-    <input type="checkbox" id="darkModeCheckbox" class="switch-checkbox">
-    <label class="check" for="darkModeCheckbox"></label>
-    <main class="dark-mode responsiveMain">
-        <article>
-            <section class="dark-mode section">
-                <div class="intro">
-                    <h1>Bem-vindo ao Agrinho 2023!</h1>
-                    <p>Olá! Meu nome é Gladson Coronado e estou muito empolgado em participar do Agrinho deste ano.
-                        Neste
-                        espaço, quero compartilhar com vocês um pouco sobre a importância do <span
-                            class="highlight highlight1"
-                            aria-label="detalhe tubulação de drenagem de chorume na vala/ trincheira aterro sanitário">saneamento
-                            básico</span> e da
-                        <span class="highlight highlight2"
-                            aria-label="imagem perspectiva aterro sanitário do município de Douradina">preservação
-                            ambiental</span> para o nosso futuro.
-                    </p>
-                    <p>Vamos aprender juntos sobre como cuidar do meio ambiente e promover a sustentabilidade. Aqui
-                        estão
-                        alguns dos tópicos que abordaremos:</p>
-                    <ul class="resume">
-                        <li><strong>Compreensão da poluição e seus impactos</strong></li>
-                        <li><strong>Soluções de tratamento de esgoto</strong></li>
-                        <li><strong>Benefícios do saneamento básico para a sociedade</strong></li>
-                        <li><strong>Engajamento e participação ativa</strong></li>
-                    </ul>
-                    <p class="about-me">Sobre mim: Meu nome é <span class="highlight highlight3"
-                            aria-label="foto de Gladson Coronado">Gladson Coronado</span> sou um
-                        estudante
-                        do segundo ano do ensino médio da escola Cleoracy Aparecida Gil, tenho 17 anos sempre procuro
-                        aprender mais.</p>
-                    <div class="hide_img">
-                        <ul class="slides">
-                            <input type="radio" name="radio-btn" id="img-1" checked />
-                            <li class="slide-container">
-                                <div class="slide">
-                                    <img src="imagens/foto1.JPG" alt="disposição da tubulação da galeria">
-                                </div>
-                                <div class="nav">
-                                    <label for="img-4" class="prev"></label>
-                                    <label for="img-2" class="next"></label>
-                                </div>
-                            </li>
-                            <input type="radio" name="radio-btn" id="img-2" />
-                            <li class="slide-container">
-                                <div class="slide">
-                                    <img src="imagens/foto2.JPG" alt="término seção galeria pluvial">
-                                </div>
-                                <div class="nav">
-                                    <label for="img-1" class="prev"></label>
-                                    <label for="img-3" class="next"></label>
-                                </div>
-                            </li>
-                            <input type="radio" name="radio-btn" id="img-3" />
-                            <li class="slide-container">
-                                <div class="slide">
-                                    <img src="imagens/foto3.jpg" alt="lagoa de chorume aterro sanitário">
-                                </div>
-                                <div class="nav">
-                                    <label for="img-2" class="prev"></label>
-                                    <label for="img-4" class="next"></label>
-                                </div>
-                            </li>
-                            <input type="radio" name="radio-btn" id="img-4" />
-                            <li class="slide-container">
-                                <div class="slide">
-                                    <img src="imagens/foto4.JPG" alt="dissipador energia galeria pluvial">
-                                </div>
-                                <div class="nav">
-                                    <label for="img-3" class="prev"></label>
-                                    <label for="img-1" class="next"></label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </article>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="imagens/logo.png" alt="Logo do Site">
-                    <h2>EcoSaneamento</h2>
-                </div>
-                <div class="footer-info">
-                    <p>&copy; 2023 EcoSaneamento. Todos os direitos reservados.</p>
-                    <p>Desenvolvido por <a href="https://api.whatsapp.com/send?phone=5544991168932"
-                            target="_blank">Gladson Coronado</a>
-                    </p>
-                </div>
-                <nav class="footer-nav">
-                    <ul class="footer-menu">
-                        <li><a class="active" href="index.html" title="Inicio">Inicio</a></li>
-                        <li><a href="benefits.html" title="Beneficios">Beneficios</a></li>
-                        <li><a href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
-                    </ul>
-                </nav>
-            </div>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="imagens/logo.png" alt="Logo do Site">
+          <h2>EcoSaneamento</h2>
         </div>
-    </footer>
+        <div class="footer-info">
+          <p>&copy; 2023 EcoSaneamento. Todos os direitos reservados.</p>
+          <p>Desenvolvido por <a href="https://api.whatsapp.com/send?phone=5544991168932" target="_blank">Gladson
+              Coronado</a>
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <ul class="footer-menu">
+            <li><a class="active" href="index.html" title="Inicio">Inicio</a></li>
+            <li><a href="benefits.html" title="Beneficios">Beneficios</a></li>
+            <li><a href="disadvantages.html" title="Desvantagens">Desvantagens</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
 </body>
 
 
