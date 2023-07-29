@@ -668,6 +668,7 @@ input[type="checkbox"]:checked~.card {
   #warning-message * h1 {
     text-align: center;
     font-size: 15vw;
+    color: black !important;
   }
   body{
     display: flex;
@@ -682,6 +683,7 @@ input[type="checkbox"]:checked~.card {
   #warning-message * h1 {
     text-align: center;
     font-size: 50vw;
+    color: black !important;
   }
 }
 
