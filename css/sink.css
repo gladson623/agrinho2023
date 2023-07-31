@@ -463,32 +463,32 @@ input[type="checkbox"]:checked~* .valve-btn:checked~* .water-camouflage {
 @keyframes water-camouflage {
 
     0% {
-        background-color: white;
+        background-color: #568794;
     }
 
     99% {
-        background-color: white;
+        background-color: #568794;
     }
 
     100% {
-        background-color: red;
+        background-color: #568794;
     }
 }
 
 @keyframes water-camouflage2 {
 
     0% {
-        background-color: #181818;
+        background-color: #568794;
 
     }
 
     99% {
-        background-color: #181818;
+        background-color: #568794;
 
     }
 
     100% {
-        background-color: red;
+        background-color: #568794;
     }
 }
 

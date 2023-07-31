@@ -651,6 +651,8 @@ input[type="checkbox"]:checked~.card {
   height: 10px;
   background-color: #000;
   border-radius: 50%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
   margin-top: 10px;
 }
 
@@ -662,7 +664,7 @@ input[type="checkbox"]:checked~.card {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
   }
 
   #warning-message * h1 {
@@ -670,7 +672,8 @@ input[type="checkbox"]:checked~.card {
     font-size: 15vw;
     color: black !important;
   }
-  body{
+
+  body {
     display: flex;
     align-items: center;
     justify-content: center;

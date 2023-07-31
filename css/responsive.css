@@ -60,6 +60,12 @@
     width: 0rem;
   }
 
+  body .sink {
+    opacity: 0;
+    height: 0rem !important;
+    width: 0rem !important;
+  }
+
   div.sinks {
     height: 0rem;
     width: 0rem;
@@ -220,7 +226,7 @@
   }
 
   .septic-tank .label.inlet-label {
-    left: -0.8125rem;
+    left: -0.6125rem;
   }
 
   .septic-tank .inlet-pipe {
@@ -228,7 +234,7 @@
   }
 
   .septic-tank .label.outlet-label {
-    right: -0.8125rem;
+    right: -0.3125rem;
   }
 
   .septic-tank div.label {
@@ -243,6 +249,13 @@
   div.septic-tank {
     width: 90%;
     height: 32.75rem;
+    border: 0px !important;
+  }
+
+  .septic-tank:after,
+  .septic-tank:before {
+    border: 0px !important;
+    display: none;
   }
 }
 
@@ -256,7 +269,7 @@
   }
 }
 
-@media screen and (max-width: 13.125rem) {
+@media screen and (max-width: 13.75rem) {
   .septic-tank {
     display: none;
   }
