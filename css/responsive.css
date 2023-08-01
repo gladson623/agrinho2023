@@ -48,25 +48,25 @@
   }
 }
 
-@media screen and (max-width: 19.375rem) {
+@media screen and (max-width: 300px) {
 
-  div.container1 {
+  section div.container1 {
     padding-top: 1rem !important;
   }
 
-  body .sink .faucets {
+  body.dark-mode .sink .faucets {
     opacity: 0;
     height: 0rem;
     width: 0rem;
   }
 
-  body .sink {
+  body.dark-mode .sink {
     opacity: 0;
     height: 0rem !important;
     width: 0rem !important;
   }
 
-  div.sinks {
+  .sink .faucets div.sinks {
     height: 0rem;
     width: 0rem;
   }
@@ -77,6 +77,8 @@
   }
 
 }
+
+
 
 @media screen and (min-width: 84.375rem) {
   body .sink .faucets {

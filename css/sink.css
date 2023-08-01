@@ -442,12 +442,6 @@ body .sink .faucets .cold-water::before {
     animation: water-camouflage 3.6s ease;
 }
 
-input[type="checkbox"]:checked~* .valve-btn:checked~* .water-camouflage {
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    animation: water-camouflage2 3.6s ease;
-}
 
 .valve-btn:checked~* .can-water {
     height: 100%;
@@ -458,6 +452,37 @@ input[type="checkbox"]:checked~* .valve-btn:checked~* .water-camouflage {
     width: 1.875rem;
     animation: background-can-water 3s forwards;
     animation-delay: 3.5s;
+}
+
+body.dark-mode .sink {
+    top: 3rem !important;
+    left: 0 !important;
+    height: 700px;
+    width: 50%;
+    border: 10px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888;
+    padding: 20px;
+    background-color: #568794;
+    position: absolute;
+    top: 600px !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 900px) {
+    body.dark-mode .sink {
+        top: 700px !important;
+    }
+}
+
+div.container1 {
+    padding-top: 57rem !important;
+}
+
+body.dark-mode .sink .faucets {
+    top: 3.125rem !important;
+    left: 0 !important;
 }
 
 @keyframes water-camouflage {
@@ -491,6 +516,8 @@ input[type="checkbox"]:checked~* .valve-btn:checked~* .water-camouflage {
         background-color: #568794;
     }
 }
+
+
 
 @keyframes background-can-water {
 
