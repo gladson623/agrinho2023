@@ -211,19 +211,8 @@ div.container h2 {
     margin-bottom: 1.25rem;
 }
 
-@media (max-width: 900px) {
 
-    section div.container1 {
-        padding-top: 58rem !important;
-    }
-}
 
-@media (max-width: 650px) {
-
-    section div.container1 {
-        padding-top: 55rem !important;
-    }
-}
 
 @media screen and (max-width: 550px) {
     body.dark-mode .sink {

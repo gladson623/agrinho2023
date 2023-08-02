@@ -50,8 +50,10 @@
 
 @media screen and (max-width: 300px) {
 
-  section div.container1 {
-    padding-top: 1rem !important;
+  .sink-div {
+    height: 0;
+    width: 0;
+    padding: 0 !important;
   }
 
   body.dark-mode .sink .faucets {
