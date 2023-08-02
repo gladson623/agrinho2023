@@ -48,7 +48,7 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 18.75rem) {
 
   .sink-div {
     height: 0;
@@ -253,12 +253,12 @@
   div.septic-tank {
     width: 90%;
     height: 32.75rem;
-    border: 0px !important;
+    border: 0rem !important;
   }
 
   .septic-tank:after,
   .septic-tank:before {
-    border: 0px !important;
+    border: 0rem !important;
     display: none;
   }
 }

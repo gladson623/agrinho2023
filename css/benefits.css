@@ -99,11 +99,11 @@ p.red {
 }
 
 * div .modal_item div h3 {
-    margin-top: 15px;
+    margin-top: 0.9375rem;
 }
 
 * div .modal_item div p:last-child {
-    margin: 25px 0px !important;
+    margin: 1.5625rem 0rem !important;
 }
 
 .modal_item h3 {
@@ -214,7 +214,7 @@ div.container h2 {
 
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 34.375rem) {
     body.dark-mode .sink {
         width: 80% !important;
     }

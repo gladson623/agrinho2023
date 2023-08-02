@@ -455,15 +455,15 @@ body .sink .faucets .cold-water::before {
 }
 
 body.dark-mode .sink {
-    height: 700px;
+    height: 43.75rem;
     width: 50%;
-    border: 10px solid #000;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px #888;
-    padding: 20px;
+    border: 0.625rem solid #000;
+    border-radius: 0.625rem;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem #888;
+    padding: 1.25rem;
     background-color: #568794;
     position: static;
-    max-width: 1000px;
+    max-width: 62.5rem;
 }
 
 .sink-div {
@@ -471,7 +471,7 @@ body.dark-mode .sink {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 0;
+    padding: 3.75rem 0;
 }
 
 

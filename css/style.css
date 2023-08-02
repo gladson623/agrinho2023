@@ -623,9 +623,9 @@ input[type="checkbox"]:checked~.card {
 
 
 .face {
-  width: 100px;
-  height: 100px;
-  border: 2px solid #000;
+  width: 6.25rem;
+  height: 6.25rem;
+  border: 0.125rem solid #000;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -639,24 +639,24 @@ input[type="checkbox"]:checked~.card {
 }
 
 .eye {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   background-color: #000;
   border-radius: 50%;
-  margin: 5px;
+  margin: 0.3125rem;
 }
 
 .mouth {
-  width: 40px;
-  height: 10px;
+  width: 2.5rem;
+  height: 0.625rem;
   background-color: #000;
   border-radius: 50%;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
-@media (max-width: 200px) {
+@media (max-width: 12.5rem) {
   #warning-message {
     display: flex;
     z-index: 999;
@@ -681,7 +681,7 @@ input[type="checkbox"]:checked~.card {
   }
 }
 
-@media (max-width: 110px) {
+@media (max-width: 6.875rem) {
 
   #warning-message * h1 {
     text-align: center;
