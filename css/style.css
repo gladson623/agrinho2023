@@ -23,9 +23,9 @@ header *,
   transition: ease-in 0.5s;
 }
 
-ul li a.active {
+nav ul li a.active {
   pointer-events: none;
-  color: gray;
+  color: gray !important;
 }
 
 
