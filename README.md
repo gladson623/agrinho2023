@@ -12,7 +12,7 @@ O site é organizado da seguinte maneira:
 
 - `Inicio`: Página inicial que apresenta uma introdução sobre o que será visto neste site, além de uma breve apresentação sobre o criador. Nele também há imagens que aparecerão de forma animada ao passar o mouse nas palavras grifadas, além de um lindo carrossel de imagens para melhor entendimento.
 
-- `Beneficios`: Página que destaca os benefícios de ter um sistema de esgoto adequado. Nessa página, são apresentados modais para mostrar mais conteúdos. Também possui um slideshow e uma linda animação interativa sobre uma torneira. Esta animação pode demorar um pouco para aparecer.
+- `Beneficios`: Página que destaca os benefícios de ter um sistema de esgoto adequado. Nessa página, são apresentados modais para mostrar mais conteúdos. Também possui um slideshow e uma linda animação interativa sobre uma torneira. Esta animação vai demorar um pouco para aparecer.
 
 - `Desvantagens`: Página que aborda as desvantagens de não ter um sistema de esgoto. Nela, são apresentados carrosséis de imagens com textos para um melhor entendimento do usuário. No final da página, haverá uma representação de uma fossa séptica usando HTML e CSS, além de uma descrição do que é uma fossa séptica.
 
@@ -36,7 +36,6 @@ Caso o usuário tenha um dispositivo com largura menor que 200px, o site mostrar
 
 O Site de Saneamento Básico foi projetado e desenvolvido para funcionar na maioria dos navegadores modernos. Ele foi testado e é compatível com os seguintes navegadores:
 
-- Mozilla Firefox
 - Google Chrome
 - Opera
 - Microsoft Edge
@@ -45,8 +44,6 @@ O Site de Saneamento Básico foi projetado e desenvolvido para funcionar na maio
 Esses navegadores suportam as tecnologias utilizadas no site, como HTML5, CSS3, e JavaScript, garantindo uma experiência consistente e agradável para os usuários que o acessarem através deles.
 
 Recomendamos sempre manter seu navegador atualizado para garantir o melhor desempenho e a visualização adequada de todos os recursos presentes no site.
-
-Caso você esteja utilizando um navegador diferente, pode ser que o site ainda funcione corretamente, mas pode haver algumas pequenas diferenças na exibição ou comportamento dos elementos. Caso encontre algum problema ao acessar o site em algum navegador específico, por favor, entre em contato conosco para que possamos investigar e buscar soluções.
 
 ## Acessando o Site
 
