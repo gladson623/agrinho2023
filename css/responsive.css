@@ -1,4 +1,4 @@
-@media screen and (max-width: 56.2188rem) {
+@media screen and (max-width: 899.5008px) {
   header.header ul.nav {
     list-style-type: none;
     padding: 0;
@@ -11,44 +11,49 @@
     width: 100%;
   }
 
+  .check {
+    top: 2.3rem;
+    left: 20%;
+  }
+
   .header ul li a.active {
     pointer-events: none;
     color: gray;
   }
 
   .section-intro h1 {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
 
   .section-intro p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .benefit {
-    width: calc(100% - 1.25rem);
+    width: calc(100% - 20px);
   }
 
 }
 
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 480px) {
   .section-intro h1 {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 
   .section-intro p {
-    font-size: 0.875rem;
+    font-size: 14px;
   }
 }
 
 
 
-@media screen and (max-width: 78.125rem) {
+@media screen and (max-width: 1250px) {
   body .sink .faucets {
     left: 46vw !important;
   }
 }
 
-@media screen and (max-width: 18.75rem) {
+@media screen and (max-width: 300px) {
 
   .sink-div {
     height: 0;
@@ -58,80 +63,80 @@
 
   body.dark-mode .sink .faucets {
     opacity: 0;
-    height: 0rem;
-    width: 0rem;
+    height: 0px;
+    width: 0px;
   }
 
   body.dark-mode .sink {
     opacity: 0;
-    height: 0rem !important;
-    width: 0rem !important;
+    height: 0px !important;
+    width: 0px !important;
   }
 
   .sink .faucets div.sinks {
-    height: 0rem;
-    width: 0rem;
+    height: 0px;
+    width: 0px;
   }
 
   a.benefit {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
 }
 
 
 
-@media screen and (min-width: 84.375rem) {
+@media screen and (min-width: 1350px) {
   body .sink .faucets {
     left: 49vw !important;
   }
 }
 
-@media screen and (min-width: 212.5rem) {
+@media screen and (min-width: 3400px) {
   body .sink .faucets {
     left: 50vw !important;
   }
 }
 
-@media screen and (max-width: 40.625rem) {
+@media screen and (max-width: 650px) {
   header div.main {
-    margin-top: 3.4375rem;
+    margin-top: 55px;
   }
 
 
 
 
   .header .mobile-btn:checked~.mobile-icon .hamburguer:before {
-    transform: translateX(-2.4375rem) translateY(11.875rem);
-    width: 3.125rem;
+    transform: translateX(-39px) translateY(190px);
+    width: 50px;
     pointer-events: none;
   }
 
   .header .mobile-btn:checked~.mobile-icon .hamburguer2:before {
-    transform: translateX(-0.5rem) translateY(8.75rem);
-    width: 1.5625rem;
+    transform: translateX(-8px) translateY(140px);
+    width: 25px;
     pointer-events: none;
   }
 
 
 
   .header .mobile-btn:checked~.mobile-icon .hamburguer:after {
-    transform: translateX(-3.75rem) translateY(15rem);
-    width: 4.25rem;
+    transform: translateX(-60px) translateY(240px);
+    width: 68px;
     pointer-events: none;
   }
 
   .header .mobile-btn:checked~div.agrinho-info {
     display: block;
     position: absolute;
-    top: 8.125rem;
-    border-right: 0.0625rem solid white;
+    top: 130px;
+    border-right: 1px solid white;
   }
 
 }
 
-@media screen and (max-width: 25rem) {
+@media screen and (max-width: 400px) {
   .footer-menu {
     display: none;
   }
@@ -141,33 +146,33 @@
   }
 
   .modal_item p {
-    margin-bottom: 2.5rem;
+    margin-bottom: 40px;
   }
 
 }
 
 .logo img {
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 60px;
+  height: 60px;
 }
 
-@media only screen and (max-width: 22.5rem) {
+@media only screen and (max-width: 360px) {
   .logo img {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 30px;
+    height: 30px;
   }
 
   .logo {
-    width: 1.875rem !important;
-    height: 1.875rem !important;
+    width: 30px !important;
+    height: 30px !important;
   }
 
 }
 
-@media only screen and (max-width: 68.75rem) {
+@media only screen and (max-width: 1100px) {
 
   .logo h1 {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 
   .menu {
@@ -176,13 +181,13 @@
 
   .menu-item {
     margin-right: 0;
-    margin-bottom: 0.625rem;
+    margin-bottom: 10px;
     background-color: black;
   }
 
 }
 
-@media (max-width: 46.875rem) {
+@media (max-width: 750px) {
   .modal_item {
     width: 100%;
     max-height: 70vh;
@@ -191,31 +196,31 @@
 
   .hide_img {
     width: 100%;
-    height: 15.625rem;
+    height: 250px;
   }
 
 
 
   .hide_img .slides {
     width: 100%;
-    height: 15.625rem;
+    height: 250px;
   }
 
   .hide_img .slides .slide {
     width: 100%;
-    height: 15.625rem;
+    height: 250px;
   }
 
 }
 
-@media screen and (max-width: 12.5rem) {
+@media screen and (max-width: 200px) {
   .hide_img {
     display: none;
   }
 
 }
 
-@media screen and (max-width: 37.8125rem) {
+@media screen and (max-width: 605px) {
 
   div.description p.mobileText2 {
     display: none;
@@ -223,47 +228,47 @@
 }
 
 
-@media screen and (max-width: 25rem) {
+@media screen and (max-width: 400px) {
 
   div.description p.mobileText {
     display: none;
   }
 
   .septic-tank .label.inlet-label {
-    left: -0.6125rem;
+    left: -9.8px;
   }
 
   .septic-tank .inlet-pipe {
-    left: 0rem;
+    left: 0px;
   }
 
   .septic-tank .label.outlet-label {
-    right: -0.3125rem;
+    right: -5px;
   }
 
   .septic-tank div.label {
-    padding-right: 0rem;
-    padding-left: 0rem;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   .septic-tank .outlet-pipe {
-    right: 0rem;
+    right: 0px;
   }
 
   div.septic-tank {
     width: 90%;
-    height: 32.75rem;
-    border: 0rem !important;
+    height: 524px;
+    border: 0px !important;
   }
 
   .septic-tank:after,
   .septic-tank:before {
-    border: 0rem !important;
+    border: 0px !important;
     display: none;
   }
 }
 
-@media screen and (max-width: 18.125rem) {
+@media screen and (max-width: 290px) {
   div div.pipe1 {
     left: 21vw;
   }
@@ -273,7 +278,7 @@
   }
 }
 
-@media screen and (max-width: 13.75rem) {
+@media screen and (max-width: 220px) {
   .septic-tank {
     display: none;
   }

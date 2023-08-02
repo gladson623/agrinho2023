@@ -32,6 +32,22 @@ A responsividade é alcançada utilizando práticas de design responsivo e tecno
 
 Caso o usuário tenha um dispositivo com largura menor que 200px, o site mostrará uma tela dizendo: "O site não é compatível com este dispositivo" e uma carinha triste.
 
+## Compatibilidade com Navegadores
+
+O Site de Saneamento Básico foi projetado e desenvolvido para funcionar na maioria dos navegadores modernos. Ele foi testado e é compatível com os seguintes navegadores:
+
+- Mozilla Firefox
+- Google Chrome
+- Opera
+- Microsoft Edge
+- Brave
+
+Esses navegadores suportam as tecnologias utilizadas no site, como HTML5, CSS3, e JavaScript, garantindo uma experiência consistente e agradável para os usuários que o acessarem através deles.
+
+Recomendamos sempre manter seu navegador atualizado para garantir o melhor desempenho e a visualização adequada de todos os recursos presentes no site.
+
+Caso você esteja utilizando um navegador diferente, pode ser que o site ainda funcione corretamente, mas pode haver algumas pequenas diferenças na exibição ou comportamento dos elementos. Caso encontre algum problema ao acessar o site em algum navegador específico, por favor, entre em contato conosco para que possamos investigar e buscar soluções.
+
 ## Acessando o Site
 
 Para visualizar o site, basta acessar o seguinte link:
