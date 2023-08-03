@@ -12,7 +12,7 @@ O site é organizado da seguinte maneira:
 
 - `Inicio`: Página inicial que apresenta uma introdução sobre o que será visto neste site, além de uma breve apresentação sobre o criador. Nele também há imagens que aparecerão de forma animada ao passar o mouse nas palavras grifadas, além de um lindo carrossel de imagens para melhor entendimento.
 
-- `Beneficios`: Página que destaca os benefícios de ter um sistema de esgoto adequado. Nessa página, são apresentados modais para mostrar mais conteúdos. Também possui um slideshow e uma linda animação interativa sobre uma torneira. Esta animação vai demorar um pouco para aparecer, alem disso voce não podera interagir com ela a não ser que esteja com a valvula da torneira completamente azul, por default ela vai vir vermelha.
+- `Beneficios`: Página que destaca os benefícios de ter um sistema de esgoto adequado. Nessa página, são apresentados modais para mostrar mais conteúdos. Também possui um slideshow e uma linda animação interativa sobre uma torneira. Esta animação vai demorar um pouco para aparecer, alem disso voce não podera interagir com ela a não ser que esteja com a valvula da torneira completamente azul, ao recarregar a pagina ele vira com a cor vermelha e voce deve esperar ele ficar azul para poder comecar a interagir.
 
 - `Desvantagens`: Página que aborda as desvantagens de não ter um sistema de esgoto. Nela, são apresentados carrosséis de imagens com textos para um melhor entendimento do usuário. No final da página, haverá uma representação de uma fossa séptica usando HTML e CSS, além de uma descrição do que é uma fossa séptica.
 
