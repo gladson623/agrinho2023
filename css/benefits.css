@@ -211,7 +211,94 @@ div.container h2 {
     margin-bottom: 1.25rem;
 }
 
+.divTransition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+div.container1 h1.textTransition {
+    color: #BB86FC;
+    position: relative;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.3vw rgb(255, 202, 202);
+    display: inline-block;
+}
+
+div.container1 h1.textTransition::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 101%;
+    height: 10px;
+    background-color: #d7c1f7;
+}
+
+div.container1 h1.textTransition::before {
+    text-align: left;
+    top: -34;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #6A0DAD;
+    overflow: hidden;
+    position: absolute;
+    content: attr(data-text);
+    border-right: 2px solid #BB86FC;
+    padding-bottom: -10px;
+    -webkit-text-stroke: 0vw rgb(255, 202, 202);
+    animation: animate 6s linear infinite;
+}
+
+@media screen and (max-width: 400px) {
+    div.container1 h1.textTransition {
+        font-size: 5vw;
+    }
+
+    div.container1 h1.textTransition::after {
+        bottom: -7px;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+    div.container1 h1.textTransition {
+        font-size: 6vw;
+    }
+
+    div.container1 h1.textTransition::after {
+        bottom: -6px;
+    }
+
+}
+
+@media screen and (max-width: 250px) {
+    div.container1 h1.textTransition {
+        font-size: 6vw;
+    }
+
+    div.container1 h1.textTransition::after {
+        bottom: -7px;
+    }
+
+}
+
+
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
 
 
 @media screen and (max-width: 34.375rem) {
