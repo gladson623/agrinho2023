@@ -368,13 +368,13 @@ input:checked+.slide-container .nav label {
 }
 
 .write {
-    border-right: 2px solid black;
+    border-right: 0.125rem solid black;
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
     animation: cursor .5s infinite, writing 5s steps(24, end), move 70s linear infinite;
     font-size: xx-large;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .coloredText {
@@ -397,14 +397,14 @@ input:checked+.slide-container .nav label {
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 56.25rem) {
     .coloredText {
         font-size: 4vw;
     }
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 30rem) {
     .coloredText {
         font-size: 5.3vw;
     }
